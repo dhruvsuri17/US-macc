@@ -14,6 +14,8 @@ import rasterio
 from rasterio.transform import rowcol
 from matplotlib.ticker import FuncFormatter
 import logging
+import geopandas as gpd
+import matplotlib.lines as mlines
 
 # Configure logging
 logging.basicConfig(
@@ -37,6 +39,41 @@ DEFAULT_CONFIG = {
     'save_intermediates': True
 }
 
+def fix_paths_for_notebook(config):
+    """
+    Adjust paths in config to work when running from notebooks directory
+    
+    Args:
+        config: Configuration dictionary
+        
+    Returns:
+        Updated configuration with absolute paths
+    """
+    import os
+    
+    # Make a copy to avoid modifying the original
+    updated_config = config.copy()
+    
+    # Get the directory where this module is located
+    module_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Set project root to one level up if we're in notebooks directory
+    if os.path.basename(module_dir) == 'notebooks':
+        project_root = os.path.dirname(module_dir)
+    else:
+        project_root = module_dir
+    
+    # If data_dir is a relative path, make it absolute
+    if 'data_dir' in config and not os.path.isabs(config['data_dir']):
+        updated_config['data_dir'] = os.path.join(project_root, config['data_dir'])
+    
+    # Same for output_dir
+    if 'output_dir' in config and not os.path.isabs(config['output_dir']):
+        updated_config['output_dir'] = os.path.join(project_root, config['output_dir'])
+    
+    return updated_config
+
+# Update load_config to use fix_paths_for_notebook
 def load_config(config_file=None):
     """
     Load configuration from file or use defaults
@@ -57,6 +94,9 @@ def load_config(config_file=None):
         except Exception as e:
             logger.warning(f"Error loading config file: {e}")
             logger.warning("Using default configuration")
+    
+    # Fix paths for notebook environment
+    config = fix_paths_for_notebook(config)
     
     # Create output directory if it doesn't exist
     os.makedirs(config['output_dir'], exist_ok=True)
@@ -159,12 +199,14 @@ def load_plant_data(config, plants):
         logger.error(f"Error processing plant data: {e}")
         raise
 
-def aggregate_facility_data(plant_df_filtered):
+# Update the function signature to accept config as a parameter
+def aggregate_facility_data(plant_df_filtered, config):
     """
     Aggregate plant data to facility level
     
     Args:
         plant_df_filtered: Filtered plant DataFrame
+        config: Configuration dictionary with analysis year
         
     Returns:
         DataFrame of facility-level attributes and unit-level attributes
@@ -348,7 +390,18 @@ def load_technology_data():
     # Create the DataFrame
     technology_df = pd.DataFrame(data)
     
-    # Map technologies
+    # Inverse of the technology mapping
+    inverse_mapping = {
+        "Combustion turbine-aeroderivative": "Natural Gas Fired Combustion Turbine",
+        "Ultra-supercritical coal (USC)": "Conventional Steam Coal",
+        "Combined-cycle—multi-shaft": "Natural Gas Fired Combined Cycle",
+        "Combustion turbine—industrial frame": "Petroleum Liquids",
+        "Internal combustion engine": "Natural Gas Internal Combustion Engine"
+    }
+    
+    technology_df["Technology"] = technology_df["Technology"].replace(inverse_mapping)
+    
+    # Apply the mapping rules
     mapping_rules = {
         "Natural Gas Fired Combustion Turbine": "Combustion turbine",
         "Conventional Steam Coal": "Coal",
@@ -358,6 +411,8 @@ def load_technology_data():
         "Natural Gas Internal Combustion Engine": "Internal combustion engine",
         "Petroleum Coke": "Combustion turbine - aeroderivative"
     }
+    
+    technology_df["Technology"] = technology_df["Technology"].replace(mapping_rules)
     
     # Preserved technologies
     preserved_technologies = [
@@ -816,6 +871,189 @@ def plot_macc_curve(macc_data, config):
     
     return fig
 
+def create_transition_map(merged_df, config, output_path=None, color_dict=None):
+    """
+    Create a map visualization of power plant transitions across the US
+    
+    Args:
+        merged_df: DataFrame with plant data and MACC calculations
+        shapefile_path: Path to the US states shapefile
+        output_path: Path to save the figure (optional)
+        color_dict: Dictionary mapping transitions to colors (optional)
+        
+    Returns:
+        matplotlib figure object
+    """
+    import pandas as pd
+    import numpy as np
+    import geopandas as gpd
+    import matplotlib.pyplot as plt
+    import matplotlib.lines as mlines
+    import os
+
+    shapefile_path = os.path.join(config['data_dir'], 'raw/ne_110m_admin_1_states_provinces/ne_110m_admin_1_states_provinces.shp')
+    
+    # Default color dictionary if not provided
+    if color_dict is None:
+        color_dict = {
+            'Coal to Wind': '#87CEEB',
+            'Coal to Solar': '#FFD700',
+            'Coal to NGCC': '#98FB98',
+            'Gas to Wind': '#4682B4',
+            'Gas to Solar': '#DAA520',
+            'Gas to NGCC': '#3CB371',
+            'Oil to Wind': '#483D8B',
+            'Oil to Solar': '#CD853F',
+            'Oil to NGCC': '#2E8B57',
+            'Other to Wind': '#808080',
+            'Other to Solar': '#A9A9A9',
+            'Other to NGCC': '#696969'
+        }
+    
+    # Helper functions for categorizing plants
+    def get_lowest_macc_option(row):
+        maccs = {
+            'Wind': row['MACC - Wind ($/tonne CO2)'],
+            'Solar': row['MACC - Solar ($/tonne CO2)'],
+            'NGCC': row['MACC - NGCC ($/tonne CO2)']
+        }
+        valid_maccs = {k: v for k, v in maccs.items() if pd.notnull(v) and not np.isinf(v)}
+        if not valid_maccs:
+            return None, None
+        best_option = min(valid_maccs.items(), key=lambda x: x[1])
+        return best_option
+    
+    def get_fuel_category(tech):
+        if pd.isna(tech):
+            return 'Other'
+        tech = str(tech)  # Convert to string to handle float values
+        if 'Coal' in tech:
+            return 'Coal'
+        elif 'Gas' in tech:
+            return 'Gas'
+        elif 'Petroleum' in tech:
+            return 'Oil'
+        return 'Other'
+    
+    # Step 1: Load US States Shapefile
+    us_states = gpd.read_file(shapefile_path)
+    
+    # Filter for continental US states only
+    continental_us = us_states[(us_states['admin'] == 'United States of America') & 
+                              (~us_states['iso_3166_2'].isin(['AK', 'HI']))]
+    
+    # Step 2: Prepare and filter the data from merged_df
+    plant_map_df = merged_df[['State', 'Latitude', 'Longitude', 'Technology', 
+                              'Old Emissions (tonnes CO2)', 'MACC - Wind ($/tonne CO2)',
+                              'MACC - Solar ($/tonne CO2)', 'MACC - NGCC ($/tonne CO2)']].copy()
+    
+    # Filter for continental US coordinates only
+    plant_map_df = plant_map_df[
+        (plant_map_df['Longitude'] >= -125) & 
+        (plant_map_df['Longitude'] <= -65) & 
+        (plant_map_df['Latitude'] >= 25) & 
+        (plant_map_df['Latitude'] <= 50)
+    ]
+    
+    # Map the best technology option and derive transition names
+    plant_map_df['Best Technology'], plant_map_df['Best MACC'] = zip(*plant_map_df.apply(get_lowest_macc_option, axis=1))
+    plant_map_df['Fuel Category'] = plant_map_df['Technology'].apply(get_fuel_category)
+    plant_map_df['Transition'] = plant_map_df['Fuel Category'] + " to " + plant_map_df['Best Technology']
+    
+    # Create ordered list of transitions
+    ordered_transitions = []
+    for tech in ['Solar', 'Wind', 'NGCC']:
+        for fuel in ['Coal', 'Gas', 'Oil', 'Other']:
+            transition = f"{fuel} to {tech}"
+            if transition in plant_map_df['Transition'].unique():
+                ordered_transitions.append(transition)
+    
+    # Step 3: Ensure valid transitions
+    plant_map_df = plant_map_df[plant_map_df['Transition'].isin(ordered_transitions)]
+    
+    # Create figure 
+    fig = plt.figure(figsize=(14, 11))
+    ax = fig.add_axes([0.1, 0.2, 0.8, 0.7])  # [left, bottom, width, height]
+    
+    # Set the map extent to continental US
+    ax.set_xlim([-125, -65])
+    ax.set_ylim([25, 50])
+    
+    # Remove box
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    
+    # Plot continental US States as a base layer
+    continental_us.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.6, alpha=0.4)
+    
+    # Organize transitions by target technology
+    solar_transitions = [t for t in ordered_transitions if 'to Solar' in t]
+    wind_transitions = [t for t in ordered_transitions if 'to Wind' in t]
+    ngcc_transitions = [t for t in ordered_transitions if 'to NGCC' in t]
+    
+    # Reorganize transitions
+    final_transitions = solar_transitions + wind_transitions + ngcc_transitions
+    
+    # Create scatter plots and collect handles and labels for legend
+    handles = []
+    labels = []
+    for transition in final_transitions:
+        subset = plant_map_df[plant_map_df['Transition'] == transition]
+        sizes = np.sqrt(subset['Old Emissions (tonnes CO2)']) / 8 
+        scatter = ax.scatter(subset['Longitude'], subset['Latitude'], 
+                            s=sizes, c=color_dict.get(transition, '#808080'), label=transition, 
+                            alpha=0.95, edgecolors='black', linewidth=0.6)
+        # Create a proxy artist for the legend with fixed size
+        proxy = plt.scatter([], [], c=color_dict.get(transition, '#808080'), 
+                           s=100, label=transition,  # Fixed size for legend
+                           alpha=0.95, edgecolors='black', linewidth=0.6)
+        handles.append(proxy)
+        labels.append(transition)
+    
+    # Create size legend handles
+    size_legend_values = [1, 5, 10]  # In million tonnes
+    size_legend_handles = []
+    for value in size_legend_values:
+        size = np.sqrt(value * 1e6) / 8  
+        handle = mlines.Line2D([], [], color='black', marker='o',
+                              markersize=np.sqrt(size)/2,
+                              label=f'{value} Mt CO₂',
+                              linewidth=0, markerfacecolor='grey',
+                              markeredgecolor='black', alpha=0.95)
+        size_legend_handles.append(handle)
+    
+    # Create main transitions legend
+    legend1 = fig.legend(handles, labels,
+                        title="Technology Transition", 
+                        fontsize=12,
+                        title_fontsize=12,
+                        bbox_to_anchor=(0.5, 0.2),
+                        loc='center',
+                        ncol=3)
+    
+    # Create size legend
+    legend2 = ax.legend(handles=size_legend_handles,
+                       title="Annual Emissions",
+                       fontsize=12,
+                       title_fontsize=12,
+                       loc='lower right')
+    
+    ax.set_xticks([])
+    ax.set_yticks([])
+    
+    # Add title
+    plt.suptitle('U.S. Power Plant Transition Opportunities', fontsize=16, y=0.95)
+    plt.figtext(0.5, 0.9, 'Cost-optimal technology replacements by plant location and size', 
+                ha='center', fontsize=14)
+    
+    # Save figure if output path provided
+    if output_path:
+        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    
+    return fig
+
 def summarize_results(macc_data, config):
     """
     Generate summary statistics of MACC results
@@ -906,6 +1144,7 @@ def summarize_results(macc_data, config):
     
     return summary
 
+# Update the call to aggregate_facility_data in run_scenario
 def run_scenario(config=None, scenario_name=None):
     """
     Run a complete MACC analysis scenario
@@ -921,7 +1160,7 @@ def run_scenario(config=None, scenario_name=None):
     if isinstance(config, str):
         scenario_config = load_config(config)
     elif isinstance(config, dict):
-        scenario_config = config
+        scenario_config = fix_paths_for_notebook(config) if 'fix_paths_for_notebook' in globals() else config
     else:
         scenario_config = load_config()
     
@@ -935,7 +1174,7 @@ def run_scenario(config=None, scenario_name=None):
     # Load data
     annual_emissions, plants = load_emissions_data(scenario_config)
     plant_df_filtered = load_plant_data(scenario_config, plants)
-    aggregated_facility_attributes, unit_level_attributes = aggregate_facility_data(plant_df_filtered)
+    aggregated_facility_attributes, unit_level_attributes = aggregate_facility_data(plant_df_filtered, scenario_config)
     capital_cost_df = load_capital_cost_data(scenario_config)
     facility_level_df = calculate_capital_costs(unit_level_attributes, capital_cost_df, scenario_config)
     technology_df = load_technology_data()
@@ -999,6 +1238,920 @@ def run_sensitivity_analysis(base_config, sensitivity_params, scenario_prefix="s
         json.dump(results, f, indent=2)
     
     return results
+
+def calculate_macc_with_ccs(annual_emissions, facility_level_df, plant_location, technology_df, config):
+    """
+    Calculate Marginal Abatement Cost Curve (MACC) for power plant transitions with CCS options
+    
+    This variant replaces natural gas with natural gas + CCS as an option
+    
+    Args:
+        annual_emissions: DataFrame of annual emissions data
+        facility_level_df: DataFrame of facility-level attributes
+        plant_location: DataFrame of plant locations with renewable resources
+        technology_df: DataFrame of technology data
+        config: Configuration dictionary
+        
+    Returns:
+        DataFrame of merged data with MACC calculations
+    """
+    # Merge datasets to get required information
+    merged_df = annual_emissions.merge(facility_level_df, on="Facility ID", how="left")
+    merged_df = merged_df.merge(plant_location, on="Facility ID", how="left")
+    
+    # Check for missing values after merge
+    missing_wind = merged_df['wind_cf'].isna().sum()
+    missing_solar = merged_df['pvout'].isna().sum()
+    if missing_wind > 0 or missing_solar > 0:
+        logger.warning(f"Missing wind CF for {missing_wind} plants, missing solar PVOUT for {missing_solar} plants")
+    
+    # Fill missing values with reasonable defaults (national averages)
+    merged_df['wind_cf'] = merged_df['wind_cf'].fillna(0.35)
+    merged_df['pvout'] = merged_df['pvout'].fillna(1300)
+    
+    # Calculate required sizes for Wind, Solar, and NGCC-CCS plants
+    merged_df["Wind Size (MW)"] = merged_df["Gross Load (MWh)"] / (merged_df["wind_cf"] * 8760)
+    merged_df["Solar Size (MW)"] = merged_df.apply(
+        lambda row: (row["Gross Load (MWh)"] * 1000 / row["pvout"]) / 1000 if row["pvout"] > 0 else None, 
+        axis=1
+    )
+    merged_df["NGCC-CCS Size (MW)"] = merged_df["Gross Load (MWh)"] / (config.get('ngcc_ccs_cf', 0.55) * 8760)
+    
+    # Get technology costs and parameters for wind and solar (same as before)
+    wind_data = technology_df[technology_df["Technology"] == "Wind"]
+    wind_cost_per_kw = wind_data["Total overnight cost (2022$/kW)"].values[0]
+    wind_fixed_om = wind_data["Fixed O&M (2022$/kW)"].values[0]
+    wind_var_om = wind_data["Variable O&M (2022$/MWh)"].values[0]
+    
+    solar_data = technology_df[technology_df["Technology"] == "Solar"]
+    solar_cost_per_kw = solar_data["Total overnight cost (2022$/kW)"].values[0]
+    solar_fixed_om = solar_data["Fixed O&M (2022$/kW)"].values[0]
+    solar_var_om = solar_data["Variable O&M (2022$/MWh)"].values[0]
+    
+    # Get technology costs and parameters for NGCC with CCS
+    ccs_data = technology_df[technology_df["Technology"] == "Combined-cycle with 90% CCS"]
+    ccs_cost_per_kw = ccs_data["Total overnight cost (2022$/kW)"].values[0]
+    ccs_heat_rate = ccs_data["Heat rate (Btu/kWh)"].values[0]
+    ccs_fixed_om = ccs_data["Fixed O&M (2022$/kW)"].values[0]
+    ccs_var_om = ccs_data["Variable O&M (2022$/MWh)"].values[0]
+    
+    # Get existing plant parameters based on technology
+    def get_om_costs(technology):
+        tech_data = technology_df[technology_df["Technology"] == technology]
+        if len(tech_data) > 0:
+            return (
+                tech_data["Fixed O&M (2022$/kW)"].values[0],
+                tech_data["Variable O&M (2022$/MWh)"].values[0],
+                tech_data["Fuel Cost ($/MWh)"].values[0]
+            )
+        return 0, 0, 0
+    
+    # Calculate capital costs
+    merged_df["Wind Capital Cost ($)"] = merged_df["Wind Size (MW)"] * 1000 * wind_cost_per_kw
+    merged_df["Solar Capital Cost ($)"] = merged_df["Solar Size (MW)"] * 1000 * solar_cost_per_kw
+    merged_df["NGCC-CCS Capital Cost ($)"] = merged_df["NGCC-CCS Size (MW)"] * 1000 * ccs_cost_per_kw
+    
+    # Calculate remaining capital cost for plants less than 30 years old
+    merged_df["Existing Capital Cost ($)"] = merged_df["Total Capital Cost (2024$/kW)"] * merged_df["Total Nameplate Capacity (MW)"] * 1000
+    merged_df["Remaining Capital Cost ($)"] = merged_df.apply(
+        lambda row: row["Existing Capital Cost ($)"] * ((1 + config['discount_rate']) ** (config['plant_lifetime'] - row["Age"])) 
+        if row["Age"] < config['plant_lifetime'] else 0, 
+        axis=1
+    )
+    
+    # Calculate O&M costs for new technologies
+    merged_df["Fixed O&M - Wind ($/year)"] = merged_df["Wind Size (MW)"] * 1000 * wind_fixed_om
+    merged_df["Fixed O&M - Solar ($/year)"] = merged_df["Solar Size (MW)"] * 1000 * solar_fixed_om
+    merged_df["Fixed O&M - NGCC-CCS ($/year)"] = merged_df["NGCC-CCS Size (MW)"] * 1000 * ccs_fixed_om
+    
+    merged_df["Variable O&M - Wind ($/year)"] = merged_df["Gross Load (MWh)"] * wind_var_om
+    merged_df["Variable O&M - Solar ($/year)"] = merged_df["Gross Load (MWh)"] * solar_var_om
+    merged_df["Variable O&M - NGCC-CCS ($/year)"] = merged_df["Gross Load (MWh)"] * ccs_var_om
+    
+    # Calculate O&M costs for existing plant
+    merged_df["Fixed O&M - Existing ($/year)"] = merged_df.apply(
+        lambda row: row["Total Nameplate Capacity (MW)"] * 1000 * get_om_costs(row["Technology"])[0], 
+        axis=1
+    )
+    merged_df["Variable O&M - Existing ($/year)"] = merged_df.apply(
+        lambda row: row["Gross Load (MWh)"] * get_om_costs(row["Technology"])[1],
+        axis=1
+    )
+    merged_df["Fuel costs ($/MWh)"] = merged_df.apply(
+        lambda row: row["Gross Load (MWh)"] * get_om_costs(row["Technology"])[2],
+        axis=1
+    )
+    
+    # Calculate fuel costs
+    gas_price = config['gas_price']  # $/MMBtu
+    merged_df["NGCC-CCS Fuel Cost ($/year)"] = (merged_df["Gross Load (MWh)"] * ccs_heat_rate * 1000 / 1e6) * gas_price
+    merged_df["Existing Fuel Cost ($/year)"] = merged_df["Fuel costs ($/MWh)"] * merged_df["Gross Load (MWh)"]
+    
+    # Annualize costs
+    discount_rate = config['discount_rate']
+    plant_lifetime = config['plant_lifetime']
+    annuity_factor = (discount_rate * (1 + discount_rate) ** plant_lifetime) / ((1 + discount_rate) ** plant_lifetime - 1)
+    
+    merged_df["Annualized Capital - Wind ($)"] = merged_df["Wind Capital Cost ($)"] * annuity_factor
+    merged_df["Annualized Capital - Solar ($)"] = merged_df["Solar Capital Cost ($)"] * annuity_factor
+    merged_df["Annualized Capital - NGCC-CCS ($)"] = merged_df["NGCC-CCS Capital Cost ($)"] * annuity_factor
+    merged_df["Annualized Capital - Existing ($)"] = merged_df["Remaining Capital Cost ($)"] * annuity_factor
+    
+    # Convert old emissions from short tons to metric tons
+    short_to_tonnes = 0.9071847
+    merged_df["Old Emissions (tonnes CO2)"] = (merged_df["CO2 Mass (short tons)"]) * short_to_tonnes
+    
+    # Calculate new emissions (with CCS capturing 90% of CO2)
+    ccs_capture_rate = 0.90  # 90% capture
+    merged_df["New Emissions (tonnes CO2)"] = (merged_df["Gross Load (MWh)"] * ccs_heat_rate * 1000 * 0.05291 / 1e6) * (1 - ccs_capture_rate)
+    merged_df["Delta Emissions (tonnes CO2)"] = merged_df["Old Emissions (tonnes CO2)"] - merged_df["New Emissions (tonnes CO2)"]
+    
+    # Calculate net costs for each component
+    # Wind
+    merged_df["Net Capital Cost - Wind ($/year)"] = merged_df["Annualized Capital - Wind ($)"] - merged_df["Annualized Capital - Existing ($)"]
+    merged_df["Net Fixed O&M - Wind ($/year)"] = merged_df["Fixed O&M - Wind ($/year)"] - merged_df["Fixed O&M - Existing ($/year)"]
+    merged_df["Net Variable O&M - Wind ($/year)"] = merged_df["Variable O&M - Wind ($/year)"] - merged_df["Variable O&M - Existing ($/year)"]
+    merged_df["Net Fuel Cost - Wind ($/year)"] = 0 - merged_df["Existing Fuel Cost ($/year)"]
+    
+    # Solar
+    merged_df["Net Capital Cost - Solar ($/year)"] = merged_df["Annualized Capital - Solar ($)"] - merged_df["Annualized Capital - Existing ($)"]
+    merged_df["Net Fixed O&M - Solar ($/year)"] = merged_df["Fixed O&M - Solar ($/year)"] - merged_df["Fixed O&M - Existing ($/year)"]
+    merged_df["Net Variable O&M - Solar ($/year)"] = merged_df["Variable O&M - Solar ($/year)"] - merged_df["Variable O&M - Existing ($/year)"]
+    merged_df["Net Fuel Cost - Solar ($/year)"] = 0 - merged_df["Existing Fuel Cost ($/year)"]
+    
+    # NGCC-CCS
+    merged_df["Net Capital Cost - NGCC-CCS ($/year)"] = merged_df["Annualized Capital - NGCC-CCS ($)"] - merged_df["Annualized Capital - Existing ($)"]
+    merged_df["Net Fixed O&M - NGCC-CCS ($/year)"] = merged_df["Fixed O&M - NGCC-CCS ($/year)"] - merged_df["Fixed O&M - Existing ($/year)"]
+    merged_df["Net Variable O&M - NGCC-CCS ($/year)"] = merged_df["Variable O&M - NGCC-CCS ($/year)"] - merged_df["Variable O&M - Existing ($/year)"]
+    merged_df["Net Fuel Cost - NGCC-CCS ($/year)"] = merged_df["NGCC-CCS Fuel Cost ($/year)"] - merged_df["Existing Fuel Cost ($/year)"]
+    
+    # Calculate total cost per year for each technology
+    merged_df["Total Cost - Wind ($/year)"] = (
+        merged_df["Net Capital Cost - Wind ($/year)"] +
+        merged_df["Net Fixed O&M - Wind ($/year)"] +
+        merged_df["Net Variable O&M - Wind ($/year)"] +
+        merged_df["Net Fuel Cost - Wind ($/year)"]
+    )
+    
+    merged_df["Total Cost - Solar ($/year)"] = (
+        merged_df["Net Capital Cost - Solar ($/year)"] +
+        merged_df["Net Fixed O&M - Solar ($/year)"] +
+        merged_df["Net Variable O&M - Solar ($/year)"] +
+        merged_df["Net Fuel Cost - Solar ($/year)"]
+    )
+    
+    merged_df["Total Cost - NGCC-CCS ($/year)"] = (
+        merged_df["Net Capital Cost - NGCC-CCS ($/year)"] +
+        merged_df["Net Fixed O&M - NGCC-CCS ($/year)"] +
+        merged_df["Net Variable O&M - NGCC-CCS ($/year)"] +
+        merged_df["Net Fuel Cost - NGCC-CCS ($/year)"]
+    )
+    
+    # Calculate MACC for each technology
+    merged_df["MACC - Wind ($/tonne CO2)"] = merged_df["Total Cost - Wind ($/year)"] / merged_df["Old Emissions (tonnes CO2)"]
+    merged_df["MACC - Solar ($/tonne CO2)"] = merged_df["Total Cost - Solar ($/year)"] / merged_df["Old Emissions (tonnes CO2)"]
+    merged_df["MACC - NGCC-CCS ($/tonne CO2)"] = merged_df["Total Cost - NGCC-CCS ($/year)"] / merged_df["Delta Emissions (tonnes CO2)"]
+    
+    if config.get('save_intermediates', False):
+        output_dir = config.get('output_dir', 'output')
+        merged_df.to_csv(os.path.join(output_dir, 'macc_calculations_ccs.csv'), index=False)
+    
+    return merged_df
+
+def create_macc_curve_with_ccs(merged_df, config):
+    """
+    Create Marginal Abatement Cost Curve (MACC) data for CCS scenario
+    
+    Args:
+        merged_df: DataFrame with MACC calculations
+        config: Configuration dictionary
+        
+    Returns:
+        DataFrame with MACC curve data
+    """
+    # Process data to find lowest MACC for each facility
+    def get_lowest_macc_option(row):
+        maccs = {
+            'Wind': row['MACC - Wind ($/tonne CO2)'],
+            'Solar': row['MACC - Solar ($/tonne CO2)'],
+            'NGCC-CCS': row['MACC - NGCC-CCS ($/tonne CO2)']
+        }
+        valid_maccs = {k: v for k, v in maccs.items() if pd.notnull(v) and not np.isinf(v)}
+        if not valid_maccs:
+            return None, None
+        best_option = min(valid_maccs.items(), key=lambda x: x[1])
+        return best_option[0], best_option[1]
+    
+    def get_fuel_category(tech):
+        if pd.isna(tech):
+            return 'Other'
+        tech = str(tech)  # Convert to string to handle float values
+        if 'Coal' in tech:
+            return 'Coal'
+        elif 'Gas' in tech:
+            return 'Gas'
+        elif 'Petroleum' in tech:
+            return 'Oil'
+        return 'Other'
+    
+    # Create transition data
+    transitions_data = []
+    for _, row in merged_df.iterrows():
+        best_tech, macc = get_lowest_macc_option(row)
+        if best_tech and config['macc_filter_min'] <= macc <= config['macc_filter_max']:
+            from_fuel = get_fuel_category(row['Technology'])
+            emissions = row['Old Emissions (tonnes CO2)'] if best_tech in ['Wind', 'Solar'] else row['Delta Emissions (tonnes CO2)']
+            
+            transition_name = f"{from_fuel} to {best_tech}"
+            transitions_data.append({
+                'facility_id': row['Facility ID'],
+                'macc': macc,
+                'emissions': abs(emissions),
+                'transition': transition_name,
+                'from_fuel': from_fuel,
+                'to_tech': best_tech,
+                'nameplate_capacity': row['Total Nameplate Capacity (MW)'],
+                'annual_generation': row['Gross Load (MWh)']
+            })
+    
+    # Convert to DataFrame and sort by MACC
+    df = pd.DataFrame(transitions_data)
+    if df.empty:
+        logger.warning("No valid transitions found within MACC filter range for CCS scenario")
+        return pd.DataFrame()
+        
+    df = df.sort_values('macc')
+    
+    # Calculate cumulative emissions
+    df['cumulative_end'] = df['emissions'].cumsum()
+    df['cumulative_start'] = df['cumulative_end'] - df['emissions']
+    
+    if config.get('save_intermediates', False):
+        output_dir = config.get('output_dir', 'output')
+        df.to_csv(os.path.join(output_dir, 'macc_curve_data_ccs.csv'), index=False)
+    
+    return df
+
+def plot_macc_curve_with_ccs(macc_data, config):
+    """
+    Plot Marginal Abatement Cost Curve (MACC) for CCS scenario
+    
+    Args:
+        macc_data: DataFrame with MACC curve data
+        config: Configuration dictionary
+        
+    Returns:
+        Matplotlib figure
+    """
+    if macc_data.empty:
+        logger.error("Cannot create MACC plot: No valid data")
+        return None
+    
+    # Set up colors for different transitions
+    color_dict = {
+        'Coal to Wind': '#87CEEB',
+        'Coal to Solar': '#FFD700',
+        'Coal to NGCC-CCS': '#98FB98',
+        'Gas to Wind': '#4682B4',
+        'Gas to Solar': '#DAA520',
+        'Gas to NGCC-CCS': '#3CB371',
+        'Oil to Wind': '#483D8B',
+        'Oil to Solar': '#CD853F',
+        'Oil to NGCC-CCS': '#2E8B57',
+        'Other to Wind': '#808080',
+        'Other to Solar': '#A9A9A9',
+        'Other to NGCC-CCS': '#696969'
+    }
+    
+    # Create MACC Plot
+    fig, ax = plt.subplots(figsize=(15, 6))
+    
+    # Plot bars
+    used_labels = set()
+    for _, row in macc_data.iterrows():
+        label = row['transition'] if row['transition'] not in used_labels else None
+        ax.bar(x=(row['cumulative_start'] + row['cumulative_end']) / (2*1e9),
+               height=row['macc'],
+               width=row['emissions']/1e9,
+               color=color_dict.get(row['transition'], '#808080'),
+               label=label,
+               linewidth=0.6, alpha=0.9)
+        if label:
+            used_labels.add(row['transition'])
+    
+    # Customize the scientific-style plot
+    ax.axhline(y=0, color='black', linestyle='-', linewidth=0.8)
+    ax.set_xlabel('Cumulative CO$_2$ displaced (Gigatonnes)', fontsize=14)
+    ax.set_ylabel('Abatement cost per tonne CO$_2$ ($/tonne)', fontsize=14)
+    ax.set_title('Marginal abatement cost curve with CCS scenario', fontsize=16)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    
+    # Add faint gridlines on the y-axis
+    ax.grid(axis='y', linestyle='--', linewidth=0.5, alpha=0.7)
+    
+    # Fine-tuning ticks and labels
+    ax.tick_params(axis='both', labelsize=12)
+    
+    # Improve legend positioning
+    ax.legend(title="Technology Transition", fontsize=12, title_fontsize=12, 
+              loc='upper left', bbox_to_anchor=(1.02, 1))
+    
+    # Adjust layout
+    plt.tight_layout()
+    
+    # Save the figure if requested
+    if config.get('save_figures', True):
+        output_dir = config.get('output_dir', 'output')
+        fig_path = os.path.join(output_dir, 'macc_curve_ccs.png')
+        plt.savefig(fig_path, dpi=300, bbox_inches='tight')
+        logger.info(f"MACC curve for CCS scenario saved to {fig_path}")
+    
+    return fig
+
+def run_ccs_scenario(config=None, scenario_name=None):
+    """
+    Run a MACC analysis scenario with CCS options
+    
+    Args:
+        config: Configuration dictionary or path to config file
+        scenario_name: Name for this scenario (used in output files)
+        
+    Returns:
+        Tuple of (merged_df, macc_data, summary)
+    """
+    # Load configuration
+    if isinstance(config, str):
+        scenario_config = load_config(config)
+    elif isinstance(config, dict):
+        scenario_config = fix_paths_for_notebook(config) if 'fix_paths_for_notebook' in globals() else config
+    else:
+        scenario_config = load_config()
+    
+    # Set scenario name if not provided
+    if scenario_name is None:
+        scenario_name = 'ccs_scenario'
+    
+    # Customize output directory for this scenario
+    scenario_config['output_dir'] = os.path.join(scenario_config.get('output_dir', 'output'), scenario_name)
+    os.makedirs(scenario_config['output_dir'], exist_ok=True)
+    
+    logger.info(f"Running MACC analysis with CCS scenario: {scenario_name}")
+    
+    # Load data
+    annual_emissions, plants = load_emissions_data(scenario_config)
+    plant_df_filtered = load_plant_data(scenario_config, plants)
+    aggregated_facility_attributes, unit_level_attributes = aggregate_facility_data(plant_df_filtered, scenario_config)
+    capital_cost_df = load_capital_cost_data(scenario_config)
+    facility_level_df = calculate_capital_costs(unit_level_attributes, capital_cost_df, scenario_config)
+    technology_df = load_technology_data()
+    plant_location = load_plant_location_data(scenario_config, plants)
+    plant_location = get_renewable_resources(plant_location, scenario_config)
+    
+    # Calculate MACC with CCS options
+    merged_df = calculate_macc_with_ccs(annual_emissions, facility_level_df, plant_location, technology_df, scenario_config)
+    macc_data = create_macc_curve_with_ccs(merged_df, scenario_config)
+    
+    # Plot and summarize
+    fig = plot_macc_curve_with_ccs(macc_data, scenario_config)
+    summary = summarize_results(macc_data, scenario_config)
+    
+    logger.info(f"Completed MACC analysis with CCS scenario: {scenario_name}")
+    return merged_df, macc_data, summary
+
+def create_transition_map_with_ccs(merged_df, config, output_path=None, title=None):
+    """
+    Create a map visualization of power plant transitions across the US with CCS scenario
+    
+    Args:
+        merged_df: DataFrame with plant data and MACC calculations from CCS scenario
+        config: Configuration dictionary with data paths
+        output_path: Path to save the figure (optional)
+        title: Custom title for the map (optional)
+        
+    Returns:
+        matplotlib figure object
+    """
+    import pandas as pd
+    import numpy as np
+    import geopandas as gpd
+    import matplotlib.pyplot as plt
+    import matplotlib.lines as mlines
+    import os
+    
+    # Set up colors for different transitions with CCS
+    color_dict = {
+        'Coal to Wind': '#87CEEB',
+        'Coal to Solar': '#FFD700',
+        'Coal to NGCC-CCS': '#98FB98',
+        'Gas to Wind': '#4682B4',
+        'Gas to Solar': '#DAA520',
+        'Gas to NGCC-CCS': '#3CB371',
+        'Oil to Wind': '#483D8B',
+        'Oil to Solar': '#CD853F',
+        'Oil to NGCC-CCS': '#2E8B57',
+        'Other to Wind': '#808080',
+        'Other to Solar': '#A9A9A9',
+        'Other to NGCC-CCS': '#696969'
+    }
+    
+    # Helper functions for categorizing plants
+    def get_lowest_macc_option(row):
+        maccs = {
+            'Wind': row['MACC - Wind ($/tonne CO2)'],
+            'Solar': row['MACC - Solar ($/tonne CO2)'],
+            'NGCC-CCS': row['MACC - NGCC-CCS ($/tonne CO2)']
+        }
+        valid_maccs = {k: v for k, v in maccs.items() if pd.notnull(v) and not np.isinf(v)}
+        if not valid_maccs:
+            return None, None
+        best_option = min(valid_maccs.items(), key=lambda x: x[1])
+        return best_option
+    
+    def get_fuel_category(tech):
+        if pd.isna(tech):
+            return 'Other'
+        tech = str(tech)  # Convert to string to handle float values
+        if 'Coal' in tech:
+            return 'Coal'
+        elif 'Gas' in tech:
+            return 'Gas'
+        elif 'Petroleum' in tech:
+            return 'Oil'
+        return 'Other'
+    
+    # Get shapefile path from config
+    shapefile_path = os.path.join(
+        config['data_dir'], 
+        'raw/ne_110m_admin_1_states_provinces/ne_110m_admin_1_states_provinces.shp'
+    )
+    
+    # Step 1: Load US States Shapefile
+    us_states = gpd.read_file(shapefile_path)
+    
+    # Filter for continental US states only
+    continental_us = us_states[(us_states['admin'] == 'United States of America') & 
+                              (~us_states['iso_3166_2'].isin(['AK', 'HI']))]
+    
+    # Step 2: Prepare and filter the data from merged_df
+    plant_map_df = merged_df[['State', 'Latitude', 'Longitude', 'Technology', 
+                              'Old Emissions (tonnes CO2)', 'MACC - Wind ($/tonne CO2)',
+                              'MACC - Solar ($/tonne CO2)', 'MACC - NGCC-CCS ($/tonne CO2)']].copy()
+    
+    # Filter for continental US coordinates only
+    plant_map_df = plant_map_df[
+        (plant_map_df['Longitude'] >= -125) & 
+        (plant_map_df['Longitude'] <= -65) & 
+        (plant_map_df['Latitude'] >= 25) & 
+        (plant_map_df['Latitude'] <= 50)
+    ]
+    
+    # Map the best technology option and derive transition names
+    plant_map_df['Best Technology'], plant_map_df['Best MACC'] = zip(*plant_map_df.apply(get_lowest_macc_option, axis=1))
+    plant_map_df['Fuel Category'] = plant_map_df['Technology'].apply(get_fuel_category)
+    plant_map_df['Transition'] = plant_map_df['Fuel Category'] + " to " + plant_map_df['Best Technology']
+    
+    # Create ordered list of transitions
+    ordered_transitions = []
+    for tech in ['Solar', 'Wind', 'NGCC-CCS']:
+        for fuel in ['Coal', 'Gas', 'Oil', 'Other']:
+            transition = f"{fuel} to {tech}"
+            if transition in plant_map_df['Transition'].unique():
+                ordered_transitions.append(transition)
+    
+    # Step 3: Ensure valid transitions
+    plant_map_df = plant_map_df[plant_map_df['Transition'].isin(ordered_transitions)]
+    
+    # Create figure 
+    fig = plt.figure(figsize=(14, 11))
+    ax = fig.add_axes([0.1, 0.2, 0.8, 0.7])  # [left, bottom, width, height]
+    
+    # Set the map extent to continental US
+    ax.set_xlim([-125, -65])
+    ax.set_ylim([25, 50])
+    
+    # Remove box
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    
+    # Plot continental US States as a base layer
+    continental_us.plot(ax=ax, color='lightgrey', edgecolor='black', linewidth=0.6, alpha=0.4)
+    
+    # Organize transitions by target technology
+    solar_transitions = [t for t in ordered_transitions if 'to Solar' in t]
+    wind_transitions = [t for t in ordered_transitions if 'to Wind' in t]
+    ccs_transitions = [t for t in ordered_transitions if 'to NGCC-CCS' in t]
+    
+    # Reorganize transitions
+    final_transitions = solar_transitions + wind_transitions + ccs_transitions
+    
+    # Create scatter plots and collect handles and labels for legend
+    handles = []
+    labels = []
+    for transition in final_transitions:
+        subset = plant_map_df[plant_map_df['Transition'] == transition]
+        if subset.empty:
+            continue
+            
+        sizes = np.sqrt(subset['Old Emissions (tonnes CO2)']) / 8 
+        scatter = ax.scatter(subset['Longitude'], subset['Latitude'], 
+                            s=sizes, c=color_dict.get(transition, '#808080'), label=transition, 
+                            alpha=0.95, edgecolors='black', linewidth=0.6)
+        # Create a proxy artist for the legend with fixed size
+        proxy = plt.scatter([], [], c=color_dict.get(transition, '#808080'), 
+                           s=100, label=transition,  # Fixed size for legend
+                           alpha=0.95, edgecolors='black', linewidth=0.6)
+        handles.append(proxy)
+        labels.append(transition)
+    
+    # Create size legend handles
+    size_legend_values = [1, 5, 10]  # In million tonnes
+    size_legend_handles = []
+    for value in size_legend_values:
+        size = np.sqrt(value * 1e6) / 8  
+        handle = mlines.Line2D([], [], color='black', marker='o',
+                              markersize=np.sqrt(size)/2,
+                              label=f'{value} Mt CO₂',
+                              linewidth=0, markerfacecolor='grey',
+                              markeredgecolor='black', alpha=0.95)
+        size_legend_handles.append(handle)
+    
+    # Create main transitions legend
+    legend1 = fig.legend(handles, labels,
+                        title="Technology Transition", 
+                        fontsize=12,
+                        title_fontsize=12,
+                        bbox_to_anchor=(0.5, 0.2),
+                        loc='center',
+                        ncol=3)
+    
+    # Create size legend
+    legend2 = ax.legend(handles=size_legend_handles,
+                       title="Annual Emissions",
+                       fontsize=12,
+                       title_fontsize=12,
+                       loc='lower right')
+    
+    ax.set_xticks([])
+    ax.set_yticks([])
+    
+    # Add title
+    if title:
+        plt.suptitle(title, fontsize=16, y=0.95)
+    else:
+        plt.suptitle('U.S. Power Plant Transition with CCS Scenario', fontsize=16, y=0.95)
+    
+    plt.figtext(0.5, 0.9, 'Cost-optimal technology replacements including wind, solar, and NGCC with CCS', 
+               ha='center', fontsize=14)
+    
+    # Save figure if output path provided
+    if output_path:
+        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+        print(f"Map visualization saved to {output_path}")
+    
+    return fig
+
+def create_enhanced_transition_map(merged_df, config, ccs_scenario=True, output_path=None):
+    """
+    Create an enhanced map visualization of power plant transitions overlaid on county renewable capacity factors
+    
+    Args:
+        merged_df: DataFrame with plant data and MACC calculations
+        config: Configuration dictionary with data paths
+        ccs_scenario: Whether this is the CCS scenario (True) or baseline (False)
+        output_path: Path to save the figure (optional)
+        
+    Returns:
+        matplotlib figure object
+    """
+    import pandas as pd
+    import numpy as np
+    import geopandas as gpd
+    import matplotlib.pyplot as plt
+    import matplotlib.lines as mlines
+    from matplotlib.colors import LinearSegmentedColormap
+    import matplotlib.patches as mpatches
+    import os
+    from matplotlib.gridspec import GridSpec
+    
+    # Set up colors for different transitions based on scenario
+    if ccs_scenario:
+        color_dict = {
+            'Coal to Wind': '#87CEEB',
+            'Coal to Solar': '#FFD700',
+            'Coal to NGCC-CCS': '#98FB98',
+            'Gas to Wind': '#4682B4',
+            'Gas to Solar': '#DAA520',
+            'Gas to NGCC-CCS': '#3CB371',
+            'Oil to Wind': '#483D8B',
+            'Oil to Solar': '#CD853F',
+            'Oil to NGCC-CCS': '#2E8B57',
+            'Other to Wind': '#808080',
+            'Other to Solar': '#A9A9A9',
+            'Other to NGCC-CCS': '#696969'
+        }
+        tech_column = 'NGCC-CCS'
+    else:
+        color_dict = {
+            'Coal to Wind': '#87CEEB',
+            'Coal to Solar': '#FFD700',
+            'Coal to NGCC': '#98FB98',
+            'Gas to Wind': '#4682B4',
+            'Gas to Solar': '#DAA520',
+            'Gas to NGCC': '#3CB371',
+            'Oil to Wind': '#483D8B',
+            'Oil to Solar': '#CD853F',
+            'Oil to NGCC': '#2E8B57',
+            'Other to Wind': '#808080',
+            'Other to Solar': '#A9A9A9',
+            'Other to NGCC': '#696969'
+        }
+        tech_column = 'NGCC'
+    
+    # Helper functions for categorizing plants
+    def get_lowest_macc_option(row):
+        maccs = {
+            'Wind': row[f'MACC - Wind ($/tonne CO2)'],
+            'Solar': row[f'MACC - Solar ($/tonne CO2)'],
+            f'{tech_column}': row[f'MACC - {tech_column} ($/tonne CO2)']
+        }
+        valid_maccs = {k: v for k, v in maccs.items() if pd.notnull(v) and not np.isinf(v)}
+        if not valid_maccs:
+            return None, None
+        best_option = min(valid_maccs.items(), key=lambda x: x[1])
+        return best_option
+    
+    def get_fuel_category(tech):
+        if pd.isna(tech):
+            return 'Other'
+        tech = str(tech)  # Convert to string to handle float values
+        if 'Coal' in tech:
+            return 'Coal'
+        elif 'Gas' in tech:
+            return 'Gas'
+        elif 'Petroleum' in tech:
+            return 'Oil'
+        return 'Other'
+    
+    # Get shapefile paths from config
+    county_shapefile_path = os.path.join(
+        config['data_dir'], 
+        'raw/cb_2018_us_county_500k/cb_2018_us_county_500k.shp'
+    )
+    
+    # Step 1: Load US Counties Shapefile
+    us_counties = gpd.read_file(county_shapefile_path)
+    
+    # Filter for continental US counties only - assuming CONUS states have STATEFP <= 56 and not including AK (02) or HI (15)
+    conus_states = [str(i).zfill(2) for i in range(1, 57) if i not in [2, 15]]
+    continental_counties = us_counties[us_counties['STATEFP'].isin(conus_states)]
+    
+    # Step 2: Create a county-level renewable capacity factor dataset
+    # This would ideally come from actual data, but we'll simulate it here by using the plant-level data
+    
+    # First, extract wind and solar capacity factors for each county
+    # Group plants by county and calculate average capacity factors
+    plant_map_df = merged_df[['State', 'Latitude', 'Longitude', 'Technology', 
+                              'Old Emissions (tonnes CO2)', f'MACC - Wind ($/tonne CO2)',
+                              f'MACC - Solar ($/tonne CO2)', f'MACC - {tech_column} ($/tonne CO2)',
+                              'wind_cf', 'pvout']].copy()
+    
+    # Filter for continental US coordinates only
+    plant_map_df = plant_map_df[
+        (plant_map_df['Longitude'] >= -125) & 
+        (plant_map_df['Longitude'] <= -65) & 
+        (plant_map_df['Latitude'] >= 25) & 
+        (plant_map_df['Latitude'] <= 50)
+    ]
+    
+    # Convert plant locations to GeoDataFrame
+    plants_gdf = gpd.GeoDataFrame(
+        plant_map_df, 
+        geometry=gpd.points_from_xy(plant_map_df.Longitude, plant_map_df.Latitude),
+        crs="EPSG:4326"
+    )
+    
+    # Spatial join to get county FIPS for each plant
+    plants_with_county = gpd.sjoin(plants_gdf, continental_counties, how="left", predicate="within")
+    
+    # Group by county and calculate average capacity factors
+    county_cf = plants_with_county.groupby('GEOID').agg({
+        'wind_cf': 'mean',
+        'pvout': 'mean'
+    }).reset_index()
+    
+    # Merge back to counties
+    county_renewable_potential = continental_counties.merge(county_cf, left_on='GEOID', right_on='GEOID', how='left')
+    
+    # Fill NaN values with regional averages
+    region_cf = plants_with_county.groupby('STATEFP').agg({
+        'wind_cf': 'mean',
+        'pvout': 'mean'
+    }).reset_index()
+    
+    # For counties with no plants, use state average
+    for idx, county in county_renewable_potential.iterrows():
+        if pd.isna(county['wind_cf']) or pd.isna(county['pvout']):
+            state_fips = county['STATEFP']
+            state_avg = region_cf[region_cf['STATEFP'] == state_fips]
+            if not state_avg.empty:
+                if pd.isna(county['wind_cf']):
+                    county_renewable_potential.at[idx, 'wind_cf'] = state_avg['wind_cf'].values[0]
+                if pd.isna(county['pvout']):
+                    county_renewable_potential.at[idx, 'pvout'] = state_avg['pvout'].values[0]
+    
+    # Fill any remaining NaNs with national average
+    national_avg_wind = plants_with_county['wind_cf'].mean()
+    national_avg_solar = plants_with_county['pvout'].mean()
+    county_renewable_potential['wind_cf'].fillna(national_avg_wind, inplace=True)
+    county_renewable_potential['pvout'].fillna(national_avg_solar, inplace=True)
+    
+    # Normalize capacity factors for coloring
+    wind_min, wind_max = county_renewable_potential['wind_cf'].quantile([0.05, 0.95])
+    solar_min, solar_max = county_renewable_potential['pvout'].quantile([0.05, 0.95])
+    
+    county_renewable_potential['wind_cf_norm'] = (county_renewable_potential['wind_cf'] - wind_min) / (wind_max - wind_min)
+    county_renewable_potential['wind_cf_norm'] = county_renewable_potential['wind_cf_norm'].clip(0, 1)
+    
+    county_renewable_potential['pvout_norm'] = (county_renewable_potential['pvout'] - solar_min) / (solar_max - solar_min)
+    county_renewable_potential['pvout_norm'] = county_renewable_potential['pvout_norm'].clip(0, 1)
+    
+    # Create a 3x3 matrix category for each county based on wind and solar potential
+    def get_resource_category(row):
+        wind_cat = 0 if row['wind_cf_norm'] < 0.33 else (1 if row['wind_cf_norm'] < 0.66 else 2)
+        solar_cat = 0 if row['pvout_norm'] < 0.33 else (1 if row['pvout_norm'] < 0.66 else 2)
+        return wind_cat * 3 + solar_cat
+    
+    county_renewable_potential['resource_category'] = county_renewable_potential.apply(get_resource_category, axis=1)
+    
+    # Create a custom colormap for the 3x3 matrix
+    # Low wind, low solar -> light color
+    # High wind, high solar -> dark color
+    resource_cmap = LinearSegmentedColormap.from_list(
+        'resource_cmap', 
+        ['#FFFFFF', '#F5F5DC', '#D3D3A4', 
+         '#B0E0E6', '#ADD8E6', '#87CEEB', 
+         '#6495ED', '#4682B4', '#000080']
+    )
+    
+    # Step 3: Map the best technology option and derive transition names for plants
+    plant_map_df['Best Technology'], plant_map_df['Best MACC'] = zip(*plant_map_df.apply(get_lowest_macc_option, axis=1))
+    plant_map_df['Fuel Category'] = plant_map_df['Technology'].apply(get_fuel_category)
+    plant_map_df['Transition'] = plant_map_df['Fuel Category'] + " to " + plant_map_df['Best Technology']
+    
+    # Create ordered list of transitions
+    ordered_transitions = []
+    if ccs_scenario:
+        technologies = ['Solar', 'Wind', 'NGCC-CCS']
+    else:
+        technologies = ['Solar', 'Wind', 'NGCC']
+        
+    for tech in technologies:
+        for fuel in ['Coal', 'Gas', 'Oil', 'Other']:
+            transition = f"{fuel} to {tech}"
+            if transition in plant_map_df['Transition'].unique():
+                ordered_transitions.append(transition)
+    
+    # Ensure valid transitions
+    plant_map_df = plant_map_df[plant_map_df['Transition'].isin(ordered_transitions)]
+    
+    # Create figure
+    fig = plt.figure(figsize=(16, 12))
+    
+    # Set up layout with GridSpec for flexibility
+    gs = GridSpec(1, 1, figure=fig)
+    ax = fig.add_subplot(gs[0, 0])
+    
+    # Set the map extent to continental US
+    ax.set_xlim([-125, -65])
+    ax.set_ylim([25, 50])
+    
+    # Remove box
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    
+    # Plot county renewable potential as background
+    county_renewable_potential.plot(
+        ax=ax, 
+        column='resource_category',
+        cmap=resource_cmap,
+        edgecolor='white',
+        linewidth=0.2,
+        alpha=0.8
+    )
+    
+    # Organize transitions by target technology
+    solar_transitions = [t for t in ordered_transitions if 'to Solar' in t]
+    wind_transitions = [t for t in ordered_transitions if 'to Wind' in t]
+    if ccs_scenario:
+        gas_transitions = [t for t in ordered_transitions if 'to NGCC-CCS' in t]
+    else:
+        gas_transitions = [t for t in ordered_transitions if 'to NGCC' in t and 'CCS' not in t]
+    
+    # Reorganize transitions
+    final_transitions = solar_transitions + wind_transitions + gas_transitions
+    
+    # Create scatter plots and collect handles and labels for legend
+    handles = []
+    labels = []
+    for transition in final_transitions:
+        subset = plant_map_df[plant_map_df['Transition'] == transition]
+        if subset.empty:
+            continue
+            
+        sizes = np.sqrt(subset['Old Emissions (tonnes CO2)']) / 8 
+        scatter = ax.scatter(subset['Longitude'], subset['Latitude'], 
+                            s=sizes, c=color_dict.get(transition, '#808080'), label=transition, 
+                            alpha=0.95, edgecolors='black', linewidth=0.6)
+        # Create a proxy artist for the legend with fixed size
+        proxy = mpatches.Patch(color=color_dict.get(transition, '#808080'), label=transition)
+        handles.append(proxy)
+        labels.append(transition)
+    
+    # Create size legend handles
+    size_legend_values = [1, 5, 10]  # In million tonnes
+    size_legend_handles = []
+    for value in size_legend_values:
+        size = np.sqrt(value * 1e6) / 8  
+        handle = mlines.Line2D([], [], color='black', marker='o',
+                              markersize=np.sqrt(size)/2,
+                              label=f'{value} Mt CO₂',
+                              linewidth=0, markerfacecolor='grey',
+                              markeredgecolor='black', alpha=0.95)
+        size_legend_handles.append(handle)
+    
+    # Create main transitions legend
+    legend1 = fig.legend(handles, labels,
+                        title="Technology Transition", 
+                        fontsize=12,
+                        title_fontsize=12,
+                        bbox_to_anchor=(0.9, 0.5),
+                        loc='center right')
+    
+    # Create size legend
+    legend2 = fig.legend(handles=size_legend_handles,
+                       title="Annual Emissions",
+                       fontsize=12,
+                       title_fontsize=12,
+                       bbox_to_anchor=(0.9, 0.3),
+                       loc='center right')
+    
+    # Create resource potential matrix legend
+    resource_labels = [
+        'Low Wind, Low Solar', 'Low Wind, Med Solar', 'Low Wind, High Solar',
+        'Med Wind, Low Solar', 'Med Wind, Med Solar', 'Med Wind, High Solar',
+        'High Wind, Low Solar', 'High Wind, Med Solar', 'High Wind, High Solar'
+    ]
+    
+    # Matrix legend (3x3)
+    matrix_legend_handles = []
+    for i in range(9):
+        color = resource_cmap(i/8)  # Normalize to 0-1 range
+        patch = mpatches.Patch(color=color, label=resource_labels[i])
+        matrix_legend_handles.append(patch)
+    
+    # Create the matrix legend
+    matrix_legend = fig.legend(
+        handles=matrix_legend_handles,
+        title="County Renewable Potential",
+        fontsize=10,
+        title_fontsize=12,
+        bbox_to_anchor=(0.9, 0.7),
+        loc='center right'
+    )
+    
+    ax.set_xticks([])
+    ax.set_yticks([])
+    
+    # Add title
+    if ccs_scenario:
+        title = 'Geographic Distribution of Low-Carbon Power Transitions with CCS'
+        subtitle = 'Cost-optimal replacements with wind, solar, and natural gas with carbon capture'
+    else:
+        title = 'Geographic Distribution of Power Plant Transitions'
+        subtitle = 'Cost-optimal replacements with wind, solar, and natural gas'
+    
+    plt.suptitle(title, fontsize=16, y=0.95)
+    plt.figtext(0.5, 0.92, subtitle, ha='center', fontsize=14)
+    
+    # Add additional context
+    plt.figtext(0.5, 0.05, 
+                'Background color indicates county-level renewable energy potential (3×3 matrix of wind and solar resources)',
+                ha='center', fontsize=12, style='italic')
+    
+    # Adjust layout to make room for legends
+    plt.subplots_adjust(right=0.8)
+    
+    # Save figure if output path provided
+    if output_path:
+        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+        print(f"Enhanced map visualization saved to {output_path}")
+    
+    return fig
 
 if __name__ == "__main__":
     # Example usage
