@@ -619,6 +619,13 @@ def calculate_macc(annual_emissions, facility_level_df, plant_location, technolo
     merged_df["Solar Capital Cost ($)"] = merged_df["Solar Size (MW)"] * 1000 * solar_cost_per_kw
     merged_df["NGCC Capital Cost ($)"] = merged_df["NGCC Size (MW)"] * 1000 * ngcc_cost_per_kw
     
+    storage_cost_per_kw = 1270  # $/kW from AEO2023 report
+    storage_size_mw_wind = merged_df["Wind Size (MW)"] * (60 / 100)
+    storage_size_mw_solar = merged_df["Wind Size (MW)"] * (60 / 100)
+
+    merged_df["Wind Capital Cost ($)"] = merged_df["Wind Size (MW)"] * 1000 * wind_cost_per_kw + storage_size_mw_wind * 1000 * storage_cost_per_kw
+    merged_df["Solar Capital Cost ($)"] = merged_df["Solar Size (MW)"] * 1000 * solar_cost_per_kw + storage_size_mw_solar * 1000 * storage_cost_per_kw
+    
     # Calculate remaining capital cost for plants less than 30 years old
     merged_df["Existing Capital Cost ($)"] = merged_df["Total Capital Cost (2024$/kW)"] * merged_df["Total Nameplate Capacity (MW)"] * 1000
     merged_df["Remaining Capital Cost ($)"] = merged_df.apply(

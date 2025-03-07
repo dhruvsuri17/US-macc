@@ -1,0 +1,1091 @@
+Facility ID,Technology,Technology_alt,Operating Year,Age,Total Capital Cost (2024$/kW),Total Nameplate Capacity (MW),Fuel Category,Energy Source
+3.0,Conventional Steam Coal,Coal,1971.0,53.0,18365.55948686083,3343.4999999999995,Coal,BIT
+10.0,Natural Gas Steam Turbine,Oil/Gas steam,1965.0,59.0,11012.762448740481,1288.4,Gas,NG
+26.0,Conventional Steam Coal,Coal,1974.0,50.0,11618.89338019918,2034.0,Coal,BIT
+47.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2023.0,1.0,10176.740269829526,1169.6,Gas,NG
+54.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,6315.14860598998,1055.0,Gas,NG
+56.0,Natural Gas Fired Combined Cycle,Combined cycle,2023.0,1.0,2418.5876317249026,732.7,Gas,NG
+59.0,Conventional Steam Coal,Coal,1982.0,42.0,3293.5881663737555,109.8,Coal,SUB
+60.0,Conventional Steam Coal,Coal,2011.0,13.0,7140.900869956817,324.3,Coal,SUB
+108.0,Conventional Steam Coal,Coal,1983.0,41.0,3293.5881663737555,348.7,Coal,SUB
+113.0,Conventional Steam Coal,Coal,1980.0,44.0,6587.176332747511,425.9,Coal,SUB
+116.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2019.0,5.0,8335.169537784614,626.2,Gas,NG
+117.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,8696.129357130065,1206.7999999999997,Gas,NG
+118.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2112.0103030148666,184.5,Gas,NG
+120.0,Natural Gas Steam Turbine,Oil/Gas steam,1959.0,65.0,5849.583672323563,417.0,Gas,NG
+124.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,85.0,Gas,NG
+126.0,Natural Gas Steam Turbine,Oil/Gas steam,1967.0,57.0,24942.699400386897,528.9000000000001,Gas,NG
+130.0,Conventional Steam Coal,Coal,2008.0,16.0,10765.507505523248,2390.1,Coal,BIT
+136.0,Conventional Steam Coal,Coal,1984.0,40.0,6921.469613961109,1897.8,Coal,BIT
+141.0,Petroleum Liquids,Combustion turbine - aeroderivative,1961.0,63.0,9171.191716695568,712.3,Oil,DFO
+147.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,8034.550090420521,573.7,Gas,NG
+160.0,Natural Gas Steam Turbine,Oil/Gas steam,1979.0,45.0,10329.374392059977,660.7,Gas,NG
+165.0,Conventional Steam Coal,Coal,1985.0,39.0,5712.175798098658,1194.3,Coal,SUB
+170.0,Natural Gas Steam Turbine,Oil/Gas steam,1970.0,54.0,2081.3263034563565,552.5,Gas,NG
+201.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,1746.3598431012965,185.0,Gas,NG
+260.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,1398.0,Gas,NG
+298.0,Conventional Steam Coal,Coal,1986.0,38.0,6587.176332747511,1849.8,Coal,SUB
+315.0,Natural Gas Steam Turbine,Oil/Gas steam,1964.0,60.0,6243.978910369069,1115.0,Gas,NG
+335.0,Natural Gas Steam Turbine,Oil/Gas steam,1958.0,66.0,2081.3263034563565,218.0,Gas,NG
+341.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1976.0,48.0,3044.493263034564,252.0,Gas,NG
+350.0,Natural Gas Steam Turbine,Oil/Gas steam,1971.0,53.0,4162.652606912713,1612.0,Gas,NG
+358.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,5545.830394103591,1036.8,Gas,NG
+377.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,688.7892691951896,57.4,Gas,NG
+389.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,8012.842884985132,358.29999999999995,Gas,NG
+399.0,Natural Gas Fired Combined Cycle,Combined cycle,1995.0,29.0,5805.106582443987,548.1,Gas,NG
+400.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,14563.600174540456,1739.1,Gas,NG
+404.0,Natural Gas Fired Combined Cycle,Combined cycle,2015.0,9.0,8997.840892626999,875.9999999999999,Gas,NG
+408.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3311.5383680158893,690.5,Gas,NG
+422.0,Natural Gas Fired Combined Cycle,Combined cycle,2016.0,8.0,5316.795266776959,265.6,Gas,NG
+469.0,Natural Gas Steam Turbine,Oil/Gas steam,1968.0,56.0,5600.403874884927,1006.4000000000001,Gas,NG
+470.0,Conventional Steam Coal,Coal,2010.0,14.0,6328.367455400031,1252.8,Coal,SUB
+492.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2023.0,1.0,8175.507487520798,245.1,Gas,NG
+525.0,Conventional Steam Coal,Coal,1976.0,48.0,6587.176332747511,465.4,Coal,BIT
+533.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,6191.175604289244,654.0,Gas,NG
+544.0,Petroleum Liquids,Combustion turbine - aeroderivative,1996.0,28.0,0.0,222.6,Oil,KER
+546.0,Petroleum Liquids,Combustion turbine - aeroderivative,1971.0,53.0,2081.3263034563565,495.29999999999995,Oil,RFO
+562.0,Petroleum Liquids,Combustion turbine - aeroderivative,1973.0,51.0,4162.652606912713,786.4,Oil,RFO
+564.0,Conventional Steam Coal,Coal,1987.0,37.0,9324.027337384296,1262.0,Coal,BIT
+568.0,Natural Gas Fired Combined Cycle,Combined cycle,2019.0,5.0,2418.5876317249026,576.3,Gas,NG
+593.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,6243.978910369069,710.3,Gas,NG
+594.0,Conventional Steam Coal,Coal,1980.0,44.0,3293.5881663737555,464.1,Coal,BIT
+602.0,Conventional Steam Coal,Coal,1984.0,40.0,6587.176332747511,1370.2,Coal,BIT
+607.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1984.0,40.0,2711.3936550889957,375.99999999999994,Gas,NG
+609.0,Natural Gas Fired Combined Cycle,Combined cycle,2013.0,11.0,4797.184615384615,1295.0,Gas,NG
+612.0,Natural Gas Fired Combined Cycle,Combined cycle,1969.0,55.0,11007.351916305912,2680.8999999999996,Gas,NG
+613.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2016.0,8.0,8327.436860353446,1215.9,Gas,NG
+617.0,Natural Gas Fired Combined Cycle,Combined cycle,2016.0,8.0,4833.940193738594,1352.0,Gas,NG
+619.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,4771.751848093926,1295.0,Gas,NG
+620.0,Natural Gas Fired Combined Cycle,Combined cycle,1969.0,55.0,8369.69347885898,2377.7999999999997,Gas,NG
+621.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,4620.655989095247,1224.0,Gas,NG
+628.0,Conventional Steam Coal,Coal,1984.0,40.0,13842.93922792222,3449.0,Coal,BIT
+634.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,8475.16991830913,1475.6,Gas,NG
+641.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,13775.643538839293,2107.5,Gas,NG
+643.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,661.5,Gas,NG
+645.0,Conventional Steam Coal,Coal,1985.0,39.0,7631.766978203576,1797.0,Coal,BIT
+663.0,Natural Gas Steam Turbine,Oil/Gas steam,1981.0,43.0,6446.022554188637,471.0,Gas,NG
+664.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2009.6086380757952,141.6,Gas,NG
+666.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1607.9744844580687,370.0,Gas,NG
+667.0,Natural Gas Steam Turbine,Oil/Gas steam,1977.0,47.0,8668.502636203868,1407.1000000000001,Gas,NG
+673.0,Petroleum Liquids,Combustion turbine - aeroderivative,1976.0,48.0,3985.518453427065,98.7,Oil,DFO
+675.0,Natural Gas Fired Combined Cycle,Combined cycle,1992.0,32.0,3426.4387814879906,133.6,Gas,NG
+676.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,3718.2864873413937,545.6,Gas,NG
+683.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1992.0,32.0,3044.493263034564,342.8,Gas,NG
+688.0,Natural Gas Fired Combined Cycle,Combined cycle,1977.0,47.0,12060.428487659154,673.1,Gas,NG
+689.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,1732.3809718252346,270.1,Gas,NG
+703.0,Conventional Steam Coal,Coal,1974.0,50.0,13174.352665495022,3498.6,Coal,BIT
+710.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,12104.22029168756,2848.4000000000005,Gas,NG
+728.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,4162.652606912713,807.4,Gas,NG
+876.0,Conventional Steam Coal,Coal,1967.0,57.0,6587.176332747511,1319.0,Coal,SUB
+879.0,Conventional Steam Coal,Coal,1972.0,52.0,6587.176332747511,1785.6,Coal,SUB
+889.0,Conventional Steam Coal,Coal,1973.0,51.0,6587.176332747511,1259.6,Coal,SUB
+913.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,2517.851949355761,586.0,Gas,NG
+963.0,Conventional Steam Coal,Coal,2009.0,15.0,6209.721531804666,437.4,Coal,BIT
+976.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,11262.332249544117,249.0,Gas,NG
+983.0,Conventional Steam Coal,Coal,1955.0,69.0,19761.528998242535,1303.8,Coal,BIT
+990.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,8355.989213383935,1044.7,Gas,NG
+991.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,644.0,Gas,NG
+994.0,Conventional Steam Coal,Coal,1986.0,38.0,6587.176332747511,1349.9,Coal,BIT
+997.0,Conventional Steam Coal,Coal,1974.0,50.0,3293.5881663737555,540.0,Coal,SUB
+1001.0,Conventional Steam Coal,Coal,1970.0,54.0,7348.299648506152,1184.8999999999996,Coal,BIT
+1004.0,Coal Integrated Gasification Combined Cycle,Unknown,2013.0,11.0,0.0,812.7,Gas,SGC
+1007.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,4621.157006200741,283.0,Gas,NG
+1012.0,Conventional Steam Coal,Coal,1973.0,51.0,6587.176332747511,368.9,Coal,BIT
+1040.0,Conventional Steam Coal,Coal,1973.0,51.0,6587.176332747511,93.9,Coal,BIT
+1082.0,Conventional Steam Coal,Coal,2007.0,17.0,5235.229672592873,1648.3,Coal,SUB
+1091.0,Conventional Steam Coal,Coal,1975.0,49.0,3293.5881663737555,584.1,Coal,SUB
+1104.0,Natural Gas Steam Turbine,Oil/Gas steam,1968.0,56.0,5125.819566490921,290.79999999999995,Gas,NG
+1122.0,Natural Gas Steam Turbine,Oil/Gas steam,1982.0,42.0,4162.652606912713,108.8,Gas,NG
+1131.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,4162.652606912713,51.5,Gas,NG
+1167.0,Conventional Steam Coal,Coal,1983.0,41.0,12006.693041383412,293.5,Coal,SUB
+1206.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1975.0,49.0,8130.593166170747,118.69999999999999,Gas,NG
+1217.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,2770.1155726515462,119.1,Gas,NG
+1230.0,Natural Gas Steam Turbine,Oil/Gas steam,1963.0,61.0,2842.4496192149973,65.0,Gas,NG
+1233.0,Natural Gas Steam Turbine,Oil/Gas steam,1969.0,55.0,2081.3263034563565,149.0,Gas,NG
+1235.0,Natural Gas Steam Turbine,Oil/Gas steam,1963.0,61.0,2081.3263034563565,81.6,Gas,NG
+1239.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,3654.8628777709796,300.2,Gas,NG
+1240.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1875.5322704628677,378.0,Gas,NG
+1241.0,Conventional Steam Coal,Coal,1973.0,51.0,6587.176332747511,1598.9,Coal,SUB
+1250.0,Conventional Steam Coal,Coal,1971.0,53.0,6587.176332747511,517.0,Coal,SUB
+1268.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,64.0,Gas,NG
+1271.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,2081.3263034563565,44.0,Gas,NG
+1336.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,4364.69625073228,256.3,Gas,NG
+1353.0,Natural Gas Steam Turbine,Oil/Gas steam,1963.0,61.0,2081.3263034563565,280.5,Gas,NG
+1355.0,Conventional Steam Coal,Coal,1971.0,53.0,8221.511077180909,1444.6,Coal,BIT
+1356.0,Conventional Steam Coal,Coal,1974.0,50.0,13174.352665495022,2225.8999999999996,Coal,BIT
+1363.0,Natural Gas Fired Combined Cycle,Combined cycle,2015.0,9.0,3519.0775714285714,807.0,Gas,NG
+1364.0,Conventional Steam Coal,Coal,1982.0,42.0,13174.352665495022,1717.1999999999998,Coal,BIT
+1366.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1355.6968275444979,210.6,Gas,NG
+1378.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,8924.929007210205,1853.6,Gas,NG
+1379.0,Conventional Steam Coal,Coal,1953.0,71.0,29642.2934973638,1575.0,Coal,SUB
+1384.0,Conventional Steam Coal,Coal,1969.0,55.0,6587.176332747511,344.0,Coal,BIT
+1391.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,1405.5513837520075,450.90000000000003,Gas,NG
+1393.0,Conventional Steam Coal,Coal,1982.0,42.0,5374.914469830112,1433.6,Coal,SUB
+1396.0,Natural Gas Fired Combined Cycle,Combined cycle,1966.0,58.0,4502.763607708561,922.8,Gas,NG
+1400.0,Natural Gas Steam Turbine,Oil/Gas steam,1971.0,53.0,3423.8552316400073,390.7,Gas,NG
+1402.0,Natural Gas Steam Turbine,Oil/Gas steam,1969.0,55.0,4162.652606912713,1002.9000000000001,Gas,NG
+1403.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,7741.466492983157,2439.7,Gas,NG
+1416.0,Natural Gas Steam Turbine,Oil/Gas steam,1960.0,64.0,2081.3263034563565,125.0,Gas,NG
+1417.0,Natural Gas Steam Turbine,Oil/Gas steam,1957.0,67.0,4162.652606912713,228.0,Gas,NG
+1464.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,5351.799630484426,492.8,Gas,NG
+1507.0,Petroleum Liquids,Combustion turbine - aeroderivative,1978.0,46.0,0.0,846.0,Oil,RFO
+1554.0,Petroleum Liquids,Combustion turbine - aeroderivative,1972.0,52.0,0.0,922.5,Oil,DFO
+1556.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,2005.6916014729268,492.3,Gas,NG
+1564.0,Petroleum Liquids,Combustion turbine - aeroderivative,1972.0,52.0,0.0,180.6,Oil,RFO
+1571.0,Natural Gas Steam Turbine,Oil/Gas steam,1975.0,49.0,7207.145869947277,1825.0,Gas,NG
+1572.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1992.0,32.0,1522.246631517282,326.0,Gas,NG
+1573.0,Petroleum Liquids,Combustion turbine - aeroderivative,1973.0,51.0,0.0,260.0,Oil,DFO
+1588.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,5433.929712460064,1744.4,Gas,NG
+1595.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,1746.3598431012965,234.7,Gas,NG
+1599.0,Petroleum Liquids,Combustion turbine - aeroderivative,1968.0,56.0,0.0,1495.0,Oil,RFO
+1660.0,Natural Gas Fired Combined Cycle,Combined cycle,1977.0,47.0,3839.1823602098357,217.0,Gas,NG
+1682.0,Natural Gas Fired Combined Cycle,Combined cycle,1975.0,49.0,1904.192149970709,118.0,Gas,NG
+1702.0,Natural Gas Steam Turbine,Oil/Gas steam,1977.0,47.0,4162.652606912713,1402.3,Gas,NG
+1710.0,Conventional Steam Coal,Coal,1980.0,44.0,9880.764499121266,1560.8,Coal,SUB
+1728.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,142.2,Gas,NG
+1730.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1970.0,54.0,3044.493263034564,121.6,Gas,NG
+1733.0,Conventional Steam Coal,Coal,1973.0,51.0,13174.352665495022,3293.1000000000004,Coal,SUB
+1891.0,Natural Gas Steam Turbine,Oil/Gas steam,1953.0,71.0,4162.652606912713,116.0,Gas,NG
+1893.0,Conventional Steam Coal,Coal,1980.0,44.0,6587.176332747511,923.3,Coal,SUB
+1904.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2018.0,6.0,3108.944424354763,562.8,Gas,NG
+1912.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,3195.939418950149,644.0,Gas,NG
+1915.0,Conventional Steam Coal,Coal,1958.0,66.0,3293.5881663737555,598.4,Coal,SUB
+1927.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,3733.265389702093,585.9,Gas,NG
+2038.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,643.9938660759925,194.29999999999998,Gas,NG
+2039.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2009.0,15.0,967.4951051195634,191.3,Gas,NG
+2047.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1994.0,30.0,3805.616578793205,170.5,Gas,NG
+2049.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,4923.775922671354,919.1,Gas,NG
+2070.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2006.0,18.0,8044.74963724564,510.5,Gas,NG
+2079.0,Conventional Steam Coal,Coal,1969.0,55.0,6328.064338240081,1046.2,Coal,SUB
+2098.0,Natural Gas Steam Turbine,Oil/Gas steam,1966.0,58.0,9086.428529584067,278.4,Gas,NG
+2103.0,Conventional Steam Coal,Coal,1972.0,52.0,13174.352665495022,2389.4,Coal,SUB
+2107.0,Conventional Steam Coal,Coal,1967.0,57.0,6587.176332747511,1099.4,Coal,SUB
+2161.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1992.0,32.0,1522.246631517282,197.5,Gas,NG
+2167.0,Conventional Steam Coal,Coal,1972.0,52.0,6587.176332747511,1300.0,Coal,RC
+2168.0,Conventional Steam Coal,Coal,1982.0,42.0,9880.764499121266,1181.7,Coal,RC
+2176.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,1451.9071909700674,83.7,Gas,NG
+2226.0,Natural Gas Steam Turbine,Oil/Gas steam,1958.0,66.0,2081.3263034563565,108.8,Gas,NG
+2240.0,Conventional Steam Coal,Coal,1976.0,48.0,10571.548374332691,170.0,Coal,SUB
+2241.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2142.6910661814936,142.8,Gas,NG
+2277.0,Conventional Steam Coal,Coal,1965.0,59.0,6587.176332747511,228.7,Coal,SUB
+2291.0,Conventional Steam Coal,Coal,1968.0,56.0,12831.15524311658,644.7,Coal,SUB
+2292.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1996.0,28.0,3564.328705952933,338.4,Gas,NG
+2322.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,15383.024295218474,1375.6,Gas,NG
+2330.0,Natural Gas Steam Turbine,Oil/Gas steam,1968.0,56.0,4162.652606912713,230.0,Gas,NG
+2336.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,8703.704503894496,1032.9,Gas,NG
+2364.0,Conventional Steam Coal,Coal,1968.0,56.0,6587.176332747511,459.20000000000005,Coal,BIT
+2379.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1973.0,51.0,1522.246631517282,83.8,Gas,NG
+2390.0,Petroleum Liquids,Combustion turbine - aeroderivative,1972.0,52.0,0.0,212.0,Oil,DFO
+2393.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1996.0,28.0,5521.603690685413,512.0,Gas,NG
+2398.0,Natural Gas Fired Combined Cycle,Combined cycle,1959.0,65.0,7143.271679274598,1400.8,Gas,NG
+2399.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,242.0,Gas,NG
+2404.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,10398.336470460992,605.0,Gas,NG
+2406.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,8356.740273915222,1739.9999999999998,Gas,NG
+2411.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,2418.5876317249026,609.5,Gas,NG
+2434.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,1336.6737372195942,68.2,Gas,NG
+2442.0,Conventional Steam Coal,Coal,1969.0,55.0,6587.176332747511,1636.2,Coal,BIT
+2444.0,Natural Gas Steam Turbine,Oil/Gas steam,1972.0,52.0,7515.959679599839,398.3,Gas,NG
+2446.0,Natural Gas Steam Turbine,Oil/Gas steam,1967.0,57.0,3603.5729349736384,212.0,Gas,NG
+2450.0,Natural Gas Steam Turbine,Oil/Gas steam,1962.0,62.0,6243.978910369069,154.0,Gas,NG
+2454.0,Natural Gas Steam Turbine,Oil/Gas steam,1965.0,59.0,5465.824684145898,519.1999999999999,Gas,NG
+2480.0,Natural Gas Steam Turbine,Oil/Gas steam,1967.0,57.0,8325.305213825426,537.4000000000001,Gas,NG
+2490.0,Natural Gas Steam Turbine,Oil/Gas steam,1969.0,55.0,4923.775922671354,895.5,Gas,NG
+2493.0,Natural Gas Steam Turbine,Oil/Gas steam,1955.0,69.0,5448.044792151497,716.2,Gas,NG
+2500.0,Natural Gas Steam Turbine,Oil/Gas steam,1965.0,59.0,8055.288814522424,2095.5,Gas,NG
+2504.0,Petroleum Liquids,Combustion turbine - aeroderivative,1968.0,56.0,0.0,37.0,Oil,KER
+2511.0,Natural Gas Steam Turbine,Oil/Gas steam,1956.0,68.0,12535.009080257765,669.2,Gas,NG
+2514.0,Petroleum Liquids,Combustion turbine - aeroderivative,1972.0,52.0,0.0,110.0,Oil,DFO
+2516.0,Natural Gas Steam Turbine,Oil/Gas steam,1968.0,56.0,8325.305213825426,1564.0,Gas,NG
+2517.0,Natural Gas Steam Turbine,Oil/Gas steam,1958.0,66.0,5342.179949907882,498.0,Gas,NG
+2521.0,Petroleum Liquids,Combustion turbine - aeroderivative,1971.0,53.0,0.0,52.4,Oil,DFO
+2527.0,Natural Gas Steam Turbine,Oil/Gas steam,1953.0,71.0,2081.3263034563565,112.0,Gas,NG
+2539.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,3692.083936324168,893.1000000000001,Gas,NG
+2594.0,Petroleum Liquids,Combustion turbine - aeroderivative,1975.0,49.0,0.0,1803.6,Oil,RFO
+2625.0,Natural Gas Steam Turbine,Oil/Gas steam,1972.0,52.0,4162.652606912713,1242.0,Gas,NG
+2628.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1972.0,52.0,761.123315758641,46.5,Gas,NG
+2632.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1972.0,52.0,761.123315758641,41.9,Gas,NG
+2679.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,688.7892691951896,78.6,Gas,NG
+2682.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,4757.22611869857,96.3,Gas,NG
+2706.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,6122.082710781677,1011.4999999999998,Gas,NG
+2707.0,Petroleum Liquids,Combustion turbine - aeroderivative,1971.0,53.0,0.0,70.0,Oil,DFO
+2712.0,Conventional Steam Coal,Coal,1973.0,51.0,13174.352665495022,2558.2,Coal,BIT
+2716.0,Petroleum Liquids,Combustion turbine - aeroderivative,1971.0,53.0,0.0,163.0,Oil,DFO
+2718.0,Conventional Steam Coal,Coal,1961.0,63.0,6587.176332747511,435.2,Coal,BIT
+2720.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,4049.571428571428,697.9000000000001,Gas,NG
+2721.0,Natural Gas Steam Turbine,Oil/Gas steam,2012.0,12.0,2081.3263034563565,1530.5,Gas,NG
+2723.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,4027.324431558065,697.9000000000001,Gas,NG
+2727.0,Natural Gas Steam Turbine,Oil/Gas steam,1969.0,55.0,10749.828939660223,2119.0,Gas,NG
+2790.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2014.0,10.0,1265.5277576460355,88.0,Gas,NG
+2817.0,Conventional Steam Coal,Coal,1975.0,49.0,6587.176332747511,656.0,Coal,LIG
+2823.0,Conventional Steam Coal,Coal,1977.0,47.0,6587.176332747511,734.0,Coal,LIG
+2828.0,Conventional Steam Coal,Coal,1977.0,47.0,9880.764499121266,1880.4,Coal,BIT
+2832.0,Conventional Steam Coal,Coal,1978.0,46.0,6587.176332747511,1180.8000000000002,Coal,BIT
+2847.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1996.0,28.0,4532.887356124213,680.6000000000001,Gas,NG
+2869.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2972.8675589292843,555.6,Gas,NG
+2876.0,Conventional Steam Coal,Coal,1955.0,69.0,16467.94083186878,1086.5,Coal,BIT
+2880.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3305.9671668748524,450.0,Gas,NG
+2951.0,Natural Gas Steam Turbine,Oil/Gas steam,1969.0,55.0,7433.125933940784,947.0,Gas,NG
+2952.0,Natural Gas Steam Turbine,Oil/Gas steam,1977.0,47.0,7456.2407732864685,1716.0,Gas,NG
+2953.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2017.0,7.0,9538.092068774265,462.0,Gas,NG
+2956.0,Natural Gas Steam Turbine,Oil/Gas steam,1971.0,53.0,6243.978910369069,1701.0,Gas,NG
+2963.0,Natural Gas Steam Turbine,Oil/Gas steam,1970.0,54.0,7927.6401892421545,1477.5,Gas,NG
+2964.0,Natural Gas Steam Turbine,Oil/Gas steam,1967.0,57.0,7728.866331960353,658.0,Gas,NG
+2965.0,Natural Gas Steam Turbine,Oil/Gas steam,1956.0,68.0,4162.652606912713,348.2,Gas,NG
+3006.0,Natural Gas Fired Combined Cycle,Combined cycle,1977.0,47.0,12002.752450683824,534.9,Gas,NG
+3008.0,Natural Gas Steam Turbine,Oil/Gas steam,1975.0,49.0,6243.978910369069,305.0,Gas,NG
+3096.0,Natural Gas Fired Combined Cycle,Combined cycle,1974.0,50.0,3808.384299941418,365.4,Gas,NG
+3111.0,Petroleum Liquids,Combustion turbine - aeroderivative,1972.0,52.0,0.0,54.0,Oil,DFO
+3113.0,Petroleum Liquids,Combustion turbine - aeroderivative,1997.0,27.0,0.0,194.0,Oil,DFO
+3116.0,Petroleum Liquids,Combustion turbine - aeroderivative,1972.0,52.0,0.0,54.0,Oil,DFO
+3118.0,Conventional Steam Coal,Coal,1970.0,54.0,6587.176332747511,1963.0,Coal,BIT
+3122.0,Conventional Steam Coal,Coal,1969.0,55.0,3293.5881663737555,660.0,Coal,BIT
+3131.0,Natural Gas Steam Turbine,Oil/Gas steam,1959.0,65.0,8325.305213825426,632.0,Gas,NG
+3132.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1972.0,52.0,761.123315758641,53.1,Gas,NG
+3136.0,Conventional Steam Coal,Coal,1967.0,57.0,6587.176332747511,1883.2000000000003,Coal,BIT
+3138.0,Natural Gas Steam Turbine,Oil/Gas steam,1964.0,60.0,6243.978910369069,354.4,Gas,NG
+3140.0,Natural Gas Steam Turbine,Oil/Gas steam,1969.0,55.0,6243.978910369069,1616.1,Gas,NG
+3148.0,Natural Gas Steam Turbine,Oil/Gas steam,1975.0,49.0,4162.652606912713,1701.0,Gas,NG
+3149.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,5374.914469830112,1757.9,Gas,NG
+3161.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,4162.652606912713,861.6,Gas,NG
+3168.0,Petroleum Liquids,Combustion turbine - aeroderivative,1973.0,51.0,0.0,131.6,Oil,DFO
+3176.0,Natural Gas Fired Combined Cycle,Combined cycle,1959.0,65.0,3651.8103606996397,145.9,Gas,NG
+3236.0,Natural Gas Fired Combined Cycle,Combined cycle,1995.0,29.0,5712.576449912127,515.0,Gas,NG
+3250.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1997.0,27.0,1456.867001528718,316.0,Gas,NG
+3264.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,4915.8691797393385,954.7,Gas,NG
+3285.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,2682.281017477895,177.3,Gas,NG
+3287.0,Natural Gas Steam Turbine,Oil/Gas steam,1958.0,66.0,4162.652606912713,293.6,Gas,NG
+3295.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,8501.84400492824,758.9,Gas,NG
+3297.0,Conventional Steam Coal,Coal,1970.0,54.0,6587.176332747511,771.8,Coal,BIT
+3298.0,Conventional Steam Coal,Coal,1973.0,51.0,3293.5881663737555,659.7,Coal,BIT
+3338.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,1271.9807692307693,111.0,Gas,NG
+3393.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,1791.7000000000007,Gas,NG
+3399.0,Conventional Steam Coal,Coal,1973.0,51.0,6587.176332747511,2600.0,Coal,BIT
+3403.0,Conventional Steam Coal,Coal,1959.0,65.0,18780.763445883615,1918.4,Coal,SUB
+3405.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,5369.765908744087,996.9000000000001,Gas,NG
+3406.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,14739.890569492278,1426.0,Gas,NG
+3407.0,Conventional Steam Coal,Coal,1955.0,69.0,29642.2934973638,1700.0,Coal,SUB
+3439.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2008.0,16.0,1484.8874215912842,263.6,Gas,NG
+3441.0,Natural Gas Fired Combined Cycle,Combined cycle,1972.0,52.0,3688.9470796221394,730.2,Gas,NG
+3443.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,2342.680732343724,376.9,Gas,NG
+3452.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,4162.652606912713,927.5,Gas,NG
+3453.0,Natural Gas Steam Turbine,Oil/Gas steam,1967.0,57.0,6243.978910369069,852.2,Gas,NG
+3456.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2023.0,1.0,14593.878174152482,1109.8,Gas,NG
+3457.0,Natural Gas Steam Turbine,Oil/Gas steam,1970.0,54.0,4162.652606912713,542.8,Gas,NG
+3459.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,8325.305213825426,1811.8000000000002,Gas,NG
+3460.0,Natural Gas Steam Turbine,Oil/Gas steam,1970.0,54.0,4162.652606912713,1530.0,Gas,NG
+3470.0,Conventional Steam Coal,Coal,1977.0,47.0,22260.781195079086,4008.4000000000005,Coal,SUB
+3476.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,2081.3263034563565,351.0,Gas,NG
+3478.0,Natural Gas Steam Turbine,Oil/Gas steam,1970.0,54.0,6243.978910369069,882.0,Gas,NG
+3482.0,Natural Gas Steam Turbine,Oil/Gas steam,1971.0,53.0,6777.162304327134,860.4000000000001,Gas,NG
+3484.0,Natural Gas Steam Turbine,Oil/Gas steam,1968.0,56.0,6243.978910369069,474.7,Gas,NG
+3485.0,Natural Gas Steam Turbine,Oil/Gas steam,1964.0,60.0,6243.978910369069,336.4,Gas,NG
+3490.0,Natural Gas Steam Turbine,Oil/Gas steam,1969.0,55.0,4162.652606912713,634.7,Gas,NG
+3491.0,Natural Gas Steam Turbine,Oil/Gas steam,1976.0,48.0,6243.978910369069,1314.8,Gas,NG
+3504.0,Natural Gas Steam Turbine,Oil/Gas steam,1965.0,59.0,4162.652606912713,713.4000000000001,Gas,NG
+3507.0,Natural Gas Steam Turbine,Oil/Gas steam,1965.0,59.0,2081.3263034563565,243.3,Gas,NG
+3559.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,2592.9814191658984,142.5,Gas,NG
+3576.0,Natural Gas Steam Turbine,Oil/Gas steam,1976.0,48.0,6838.552422154926,427.7,Gas,NG
+3601.0,Natural Gas Steam Turbine,Oil/Gas steam,1972.0,52.0,6243.978910369069,623.0,Gas,NG
+3604.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,2770.382635883326,84.0,Gas,NG
+3609.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,2755.1570767807584,229.6,Gas,NG
+3611.0,Natural Gas Steam Turbine,Oil/Gas steam,1972.0,52.0,4162.652606912713,892.0,Gas,NG
+3612.0,Natural Gas Steam Turbine,Oil/Gas steam,1970.0,54.0,10058.629296767831,1138.0,Gas,NG
+3628.0,Natural Gas Steam Turbine,Oil/Gas steam,1975.0,49.0,7766.2255418863515,603.6,Gas,NG
+3631.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3622.6198083067093,192.8,Gas,NG
+3648.0,Natural Gas Steam Turbine,Oil/Gas steam,1955.0,69.0,8013.269924861822,432.79999999999995,Gas,NG
+3775.0,Natural Gas Steam Turbine,Oil/Gas steam,1958.0,66.0,4162.652606912713,475.0,Gas,NG
+3785.0,Petroleum Liquids,Combustion turbine - aeroderivative,1972.0,52.0,0.0,27.0,Oil,DFO
+3797.0,Natural Gas Fired Combined Cycle,Combined cycle,1992.0,32.0,3808.384299941418,446.59999999999997,Gas,NG
+3804.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,709.0,Gas,NG
+3845.0,Conventional Steam Coal,Coal,1973.0,51.0,3293.5881663737555,729.9,Coal,SUB
+3935.0,Conventional Steam Coal,Coal,1973.0,51.0,9880.764499121266,2932.6,Coal,BIT
+3943.0,Conventional Steam Coal,Coal,1967.0,57.0,6587.176332747511,1152.0,Coal,BIT
+3944.0,Conventional Steam Coal,Coal,1972.0,52.0,9880.764499121266,2052.0,Coal,RC
+3948.0,Conventional Steam Coal,Coal,1971.0,53.0,6587.176332747511,1632.6,Coal,BIT
+3954.0,Conventional Steam Coal,Coal,1965.0,59.0,9880.764499121266,1662.4,Coal,BIT
+3982.0,Natural Gas Steam Turbine,Oil/Gas steam,1957.0,67.0,2081.3263034563565,27.2,Gas,NG
+3992.0,Natural Gas Steam Turbine,Oil/Gas steam,1957.0,67.0,4162.652606912713,100.0,Gas,NG
+4040.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,5965.002371193275,1229.6,Gas,NG
+4041.0,Conventional Steam Coal,Coal,1967.0,57.0,13174.352665495022,1240.0,Coal,SUB
+4050.0,Conventional Steam Coal,Coal,1985.0,39.0,3293.5881663737555,413.7,Coal,SUB
+4072.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,91.0,Gas,NG
+4076.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1993.0,31.0,2283.3699472759226,187.1,Gas,NG
+4078.0,Conventional Steam Coal,Coal,2008.0,16.0,5530.277832930375,945.5,Coal,SUB
+4158.0,Conventional Steam Coal,Coal,1972.0,52.0,13174.352665495022,816.7,Coal,SUB
+4162.0,Natural Gas Steam Turbine,Oil/Gas steam,1971.0,53.0,8668.502636203868,707.1999999999999,Gas,NG
+4195.0,Petroleum Liquids,Combustion turbine - aeroderivative,1978.0,46.0,2081.3263034563565,112.2,Oil,DFO
+4266.0,Natural Gas Steam Turbine,Oil/Gas steam,1973.0,51.0,4162.652606912713,126.5,Gas,NG
+4271.0,Conventional Steam Coal,Coal,1979.0,45.0,3293.5881663737555,387.0,Coal,SUB
+4937.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,3578.813886070445,574.6,Gas,NG
+4939.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,5770.2733830784955,1082.2,Gas,NG
+4940.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,5647.540028503997,1121.7,Gas,NG
+5083.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2009.0,15.0,1728.6184208782042,231.20000000000002,Gas,NG
+6002.0,Conventional Steam Coal,Coal,1978.0,46.0,13174.352665495022,2822.0,Coal,SUB
+6004.0,Conventional Steam Coal,Coal,1979.0,45.0,6587.176332747511,1368.0,Coal,BIT
+6009.0,Conventional Steam Coal,Coal,1980.0,44.0,6587.176332747511,1800.0,Coal,SUB
+6017.0,Conventional Steam Coal,Coal,1977.0,47.0,3293.5881663737555,617.4,Coal,SUB
+6018.0,Conventional Steam Coal,Coal,1981.0,43.0,3293.5881663737555,772.0,Coal,BIT
+6021.0,Conventional Steam Coal,Coal,1984.0,40.0,9880.764499121266,1427.6,Coal,SUB
+6030.0,Conventional Steam Coal,Coal,1979.0,45.0,6587.176332747511,1215.6,Coal,RC
+6034.0,Conventional Steam Coal,Coal,1984.0,40.0,8520.46053672761,1664.4,Coal,SUB
+6035.0,Natural Gas Steam Turbine,Oil/Gas steam,1979.0,45.0,4014.610507436456,1071.3,Gas,NG
+6041.0,Conventional Steam Coal,Coal,1981.0,43.0,11441.653764748608,1608.5,Coal,BIT
+6042.0,Natural Gas Steam Turbine,Oil/Gas steam,1976.0,48.0,8777.757527317923,2951.1999999999994,Gas,NG
+6043.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,10082.269046581941,2448.4999999999995,Gas,NG
+6046.0,Petroleum Liquids,Combustion turbine - aeroderivative,1992.0,32.0,2283.3699472759226,748.0,Oil,DFO
+6055.0,Conventional Steam Coal,Coal,1981.0,43.0,8668.502636203866,1902.9,Coal,SUB
+6058.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1350.8869872562254,84.9,Gas,NG
+6061.0,Natural Gas Fired Combined Cycle,Combined cycle,2023.0,1.0,2418.5876317249026,558.0,Gas,NG
+6064.0,Conventional Steam Coal,Coal,1981.0,43.0,3939.502895055926,365.0,Coal,SUB
+6065.0,Conventional Steam Coal,Coal,2010.0,14.0,6328.367455400031,1753.9,Coal,SUB
+6068.0,Conventional Steam Coal,Coal,1978.0,46.0,9880.764499121266,2160.0,Coal,SUB
+6071.0,Conventional Steam Coal,Coal,2011.0,13.0,11075.585289732744,2594.1,Coal,BIT
+6073.0,Conventional Steam Coal,Coal,1977.0,47.0,11389.065266027575,2229.0,Coal,SUB
+6076.0,Conventional Steam Coal,Coal,1984.0,40.0,6587.176332747511,1647.4,Coal,SUB
+6077.0,Conventional Steam Coal,Coal,1979.0,45.0,6587.176332747511,1362.6,Coal,SUB
+6085.0,Conventional Steam Coal,Coal,1983.0,41.0,8109.422964264792,1105.0,Coal,BIT
+6090.0,Conventional Steam Coal,Coal,1987.0,37.0,6587.176332747511,1704.0,Coal,SUB
+6095.0,Conventional Steam Coal,Coal,1979.0,45.0,6587.176332747511,1138.0,Coal,SUB
+6096.0,Conventional Steam Coal,Coal,2009.0,15.0,6209.721531804666,1389.6,Coal,SUB
+6098.0,Conventional Steam Coal,Coal,1975.0,49.0,3293.5881663737555,451.0,Coal,SUB
+6101.0,Conventional Steam Coal,Coal,1978.0,46.0,3293.5881663737555,362.1,Coal,SUB
+6112.0,Natural Gas Fired Combined Cycle,Combined cycle,1998.0,26.0,5441.191187247771,1148.5,Gas,NG
+6113.0,Conventional Steam Coal,Coal,1976.0,48.0,16467.94083186878,3339.5,Coal,BIT
+6124.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,6088.986526069128,810.4,Gas,NG
+6137.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,1350.8869872562254,176.4,Gas,NG
+6138.0,Conventional Steam Coal,Coal,1978.0,46.0,3293.5881663737555,558.0,Coal,SUB
+6139.0,Conventional Steam Coal,Coal,1977.0,47.0,6587.176332747511,1116.0,Coal,SUB
+6146.0,Conventional Steam Coal,Coal,1977.0,47.0,9880.764499121266,2379.6000000000004,Coal,SUB
+6155.0,Conventional Steam Coal,Coal,1976.0,48.0,6587.176332747511,1242.0,Coal,SUB
+6156.0,Petroleum Liquids,Combustion turbine - aeroderivative,1975.0,49.0,0.0,641.5,Oil,RFO
+6165.0,Conventional Steam Coal,Coal,1983.0,41.0,9880.764499121266,1472.2,Coal,BIT
+6166.0,Conventional Steam Coal,Coal,1984.0,40.0,6587.176332747511,2600.0,Coal,SUB
+6177.0,Conventional Steam Coal,Coal,1979.0,45.0,6587.176332747511,821.8,Coal,SUB
+6178.0,Conventional Steam Coal,Coal,1980.0,44.0,3293.5881663737555,622.4,Coal,SUB
+6179.0,Conventional Steam Coal,Coal,1979.0,45.0,9880.764499121266,1690.0,Coal,SUB
+6180.0,Conventional Steam Coal,Coal,2010.0,14.0,6882.091992609337,1795.4,Coal,LIG
+6183.0,Conventional Steam Coal,Coal,1982.0,42.0,3293.5881663737555,410.0,Coal,LIG
+6190.0,Petroleum Coke,Combustion turbine - aeroderivative,2010.0,14.0,5374.914469830112,1707.3,Coal,PC
+6193.0,Conventional Steam Coal,Coal,1976.0,48.0,9880.764499121266,1080.0,Coal,SUB
+6194.0,Conventional Steam Coal,Coal,1982.0,42.0,6587.176332747511,1135.8,Coal,SUB
+6195.0,Conventional Steam Coal,Coal,2011.0,13.0,8663.147501474097,603.0,Coal,SUB
+6204.0,Conventional Steam Coal,Coal,1981.0,43.0,9880.764499121266,1863.0,Coal,SUB
+6213.0,Conventional Steam Coal,Coal,1983.0,41.0,6587.176332747511,1080.0,Coal,BIT
+6223.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1978.0,46.0,2903.8143819401344,379.0,Gas,NG
+6243.0,Natural Gas Steam Turbine,Oil/Gas steam,1978.0,46.0,3723.778169251237,203.2,Gas,NG
+6248.0,Conventional Steam Coal,Coal,1981.0,43.0,3293.5881663737555,552.3,Coal,SUB
+6249.0,Conventional Steam Coal,Coal,1975.0,49.0,13174.352665495022,1260.0,Coal,BIT
+6253.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,640.4793793385054,335.70000000000005,Gas,NG
+6254.0,Conventional Steam Coal,Coal,1981.0,43.0,3293.5881663737555,725.9,Coal,SUB
+6257.0,Conventional Steam Coal,Coal,1982.0,42.0,9880.764499121266,2673.0,Coal,SUB
+6264.0,Conventional Steam Coal,Coal,1980.0,44.0,3293.5881663737555,1300.0,Coal,BIT
+6358.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,2498.765661756566,90.5,Gas,NG
+6373.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1997.0,27.0,2084.130328308857,266.1,Gas,NG
+6463.0,Petroleum Liquids,Combustion turbine - aeroderivative,2005.0,19.0,0.0,78.7,Oil,DFO
+6469.0,Conventional Steam Coal,Coal,1984.0,40.0,6587.176332747511,954.0,Coal,LIG
+6481.0,Conventional Steam Coal,Coal,1986.0,38.0,6587.176332747511,1640.0,Coal,BIT
+6584.0,Petroleum Liquids,Combustion turbine - aeroderivative,2006.0,18.0,0.0,126.49999999999999,Oil,DFO
+6635.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,643.9938660759925,84.0,Gas,NG
+6639.0,Conventional Steam Coal,Coal,1979.0,45.0,5374.914469830112,586.0,Coal,BIT
+6641.0,Conventional Steam Coal,Coal,1983.0,41.0,6587.176332747511,1800.0,Coal,SUB
+6664.0,Conventional Steam Coal,Coal,1983.0,41.0,3293.5881663737555,811.9,Coal,SUB
+6705.0,Conventional Steam Coal,Coal,1970.0,54.0,13174.352665495022,822.8,Coal,BIT
+6761.0,Conventional Steam Coal,Coal,1984.0,40.0,6494.11216085734,800.4,Coal,SUB
+6768.0,Conventional Steam Coal,Coal,1981.0,43.0,3293.5881663737555,261.0,Coal,SUB
+6772.0,Conventional Steam Coal,Coal,1982.0,42.0,3293.5881663737555,446.0,Coal,SUB
+6823.0,Conventional Steam Coal,Coal,1984.0,40.0,3293.5881663737555,509.4,Coal,BIT
+7013.0,Natural Gas Steam Turbine,Oil/Gas steam,1970.0,54.0,2081.3263034563565,28.1,Gas,NG
+7030.0,Conventional Steam Coal,Coal,1990.0,34.0,6587.176332747511,349.2,Coal,LIG
+7032.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1989.0,35.0,3044.493263034564,407.70000000000005,Gas,NG
+7063.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2010.0,14.0,3210.4972704325664,676.0,Gas,NG
+7082.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,5456.6094730122395,745.0,Gas,NG
+7097.0,Conventional Steam Coal,Coal,2010.0,14.0,6328.367455400031,1488.5,Coal,SUB
+7138.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1989.0,35.0,1522.246631517282,76.8,Gas,NG
+7145.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1994.0,30.0,2283.3699472759226,179.8,Gas,NG
+7146.0,Petroleum Liquids,Combustion turbine - aeroderivative,1989.0,35.0,0.0,238.5,Oil,DFO
+7153.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,7003.592534697392,1098.2,Gas,NG
+7155.0,Petroleum Liquids,Combustion turbine - aeroderivative,1991.0,33.0,0.0,90.2,Oil,DFO
+7158.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1993.0,31.0,4566.739894551846,571.8,Gas,NG
+7159.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1993.0,31.0,3044.493263034564,381.6,Gas,NG
+7203.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1993.0,31.0,3044.493263034564,381.6,Gas,NG
+7210.0,Natural Gas Steam Turbine,Oil/Gas steam,1996.0,28.0,2081.3263034563565,417.3,Gas,NG
+7212.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1990.0,34.0,3044.493263034564,368.4,Gas,NG
+7213.0,Conventional Steam Coal,Coal,1995.0,29.0,6587.176332747511,848.0,Coal,BIT
+7237.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,2164.942724136674,405.70000000000005,Gas,NG
+7238.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,6953.55728767552,706.0,Gas,NG
+7242.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,6622.202615499818,1492.5,Gas,NG
+7266.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2572.4332199119954,199.0,Gas,NG
+7270.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,3044.493263034564,381.6,Gas,NG
+7277.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,12177.973052138255,1753.6,Gas,NG
+7288.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,761.123315758641,112.8,Gas,NG
+7296.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,3249.079887462027,690.5,Gas,NG
+7302.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,10873.34988451737,2266.3,Gas,NG
+7307.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,5379.586933234362,183.1,Gas,NG
+7314.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,1904.192149970709,170.0,Gas,NG
+7315.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,4771.144527417423,223.5,Gas,NG
+7318.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,761.123315758641,45.1,Gas,NG
+7325.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,1522.246631517282,176.4,Gas,NG
+7335.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1992.0,32.0,1522.246631517282,82.8,Gas,NG
+7336.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,2211.0359007124716,168.7,Gas,NG
+7343.0,Conventional Steam Coal,Coal,1979.0,45.0,3293.5881663737555,695.9,Coal,SUB
+7348.0,Petroleum Liquids,Combustion turbine - aeroderivative,1995.0,29.0,0.0,183.8,Oil,DFO
+7350.0,Natural Gas Fired Combined Cycle,Combined cycle,1995.0,29.0,1904.192149970709,296.0,Gas,NG
+7380.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,5612.364947758679,853.3,Gas,NG
+7425.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1997.0,27.0,728.433500764359,138.6,Gas,NG
+7449.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1996.0,28.0,761.123315758641,50.0,Gas,NG
+7456.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1994.0,30.0,1522.246631517282,166.4,Gas,NG
+7504.0,Conventional Steam Coal,Coal,1995.0,29.0,3934.0675457122607,130.0,Coal,SUB
+7515.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1998.0,26.0,651.5860386165924,115.6,Gas,NG
+7527.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,2665.31546572935,125.5,Gas,NG
+7551.0,Natural Gas Fired Combined Cycle,Combined cycle,1997.0,27.0,3256.554293615951,193.39999999999998,Gas,NG
+7552.0,Natural Gas Fired Combined Cycle,Combined cycle,1997.0,27.0,1774.6538545533958,173.9,Gas,NG
+7604.0,Natural Gas Fired Combined Cycle,Combined cycle,1999.0,25.0,1671.9576497423654,506.6,Gas,NG
+7605.0,Natural Gas Fired Combined Cycle,Combined cycle,1997.0,27.0,887.3269272766979,248.0,Gas,NG
+7697.0,Natural Gas Fired Combined Cycle,Combined cycle,1999.0,25.0,1743.2856550580432,122.5,Gas,NG
+7698.0,Natural Gas Fired Combined Cycle,Combined cycle,1999.0,25.0,1743.2856550580432,97.0,Gas,NG
+7699.0,Natural Gas Fired Combined Cycle,Combined cycle,1997.0,27.0,1774.6538545533958,278.1,Gas,NG
+7710.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,7961.522027645801,1995.6999999999998,Gas,NG
+7721.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,1732.3809718252346,317.4,Gas,NG
+7749.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,644.4280679933665,121.2,Gas,NG
+7754.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,1288.856135986733,315.6,Gas,NG
+7757.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,6648.142886309281,1069.6,Gas,NG
+7759.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2516.011649801373,340.0,Gas,NG
+7760.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,2577.712271973466,188.0,Gas,NG
+7763.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1783.7205353575707,181.5,Gas,NG
+7764.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1235.0528911243623,386.1,Gas,NG
+7768.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,1288.856135986733,99.6,Gas,NG
+7782.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,640.4793793385054,32.0,Gas,NG
+7783.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,640.4793793385054,32.0,Gas,NG
+7790.0,Conventional Steam Coal,Coal,1986.0,38.0,3293.5881663737555,499.5,Coal,BIT
+7805.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,9400.420451560267,2244.8,Gas,NG
+7813.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,570.0,Gas,NG
+7818.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2016.0,8.0,4583.178385734065,173.0,Gas,NG
+7825.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,154.8,Gas,NG
+7826.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,4500.685391587603,1192.0,Gas,NG
+7829.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,1288.856135986733,242.0,Gas,NG
+7834.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,5646.83961722077,1102.0,Gas,NG
+7835.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2763.1355008457053,772.6,Gas,NG
+7836.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,2066.3678075855687,513.3,Gas,NG
+7837.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,3453.9193760571316,509.1,Gas,NG
+7838.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,705.5,Gas,NG
+7839.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3641.5295502825616,892.5,Gas,NG
+7842.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,640.4793793385054,71.0,Gas,NG
+7843.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1778.9106950692985,467.8,Gas,NG
+7844.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,49.0,Gas,NG
+7845.0,Natural Gas Fired Combined Cycle,Combined cycle,2010.0,14.0,11220.919287232371,1625.2000000000003,Gas,NG
+7846.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,3118.224140293587,783.1,Gas,NG
+7848.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1769.2910144927537,321.29999999999995,Gas,NG
+7863.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,71.0,Gas,NG
+7869.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,122.0,Gas,NG
+7870.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,3808.384299941418,176.39999999999998,Gas,NG
+7872.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1769.2910144927537,594.0,Gas,NG
+7873.0,Natural Gas Fired Combined Cycle,Combined cycle,1967.0,57.0,12099.414207437554,2398.9,Gas,NG
+7887.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3400.577217667382,216.29999999999998,Gas,NG
+7897.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,5433.929712460064,1304.0,Gas,NG
+7900.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,6089.757630722088,696.4,Gas,NG
+7903.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,117.8,Gas,NG
+7909.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,94.0,Gas,NG
+7910.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,94.0,Gas,NG
+7912.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,47.0,Gas,NG
+7913.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,94.0,Gas,NG
+7914.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,94.0,Gas,NG
+7915.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,47.0,Gas,NG
+7916.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,3740.622436413191,726.0,Gas,NG
+7917.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,539.7,Gas,NG
+7925.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3567.441070715141,537.8,Gas,NG
+7928.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,102.0,Gas,NG
+7929.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2763.1355008457053,408.0,Gas,NG
+7946.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,594.1,Gas,NG
+7947.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,51.3,Gas,NG
+7948.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,3856.1765557163535,402.0,Gas,NG
+7953.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2008.0,16.0,1931.590734367356,270.9,Gas,NG
+7960.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,372.0,Gas,NG
+7962.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,1926.4374087171786,96.0,Gas,NG
+7964.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,240.0,Gas,NG
+7967.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,88.0,Gas,NG
+7972.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,340.0,Gas,NG
+7975.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2763.1355008457053,186.0,Gas,NG
+7981.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,5122.190186836044,799.2,Gas,NG
+7984.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,60.5,Gas,NG
+7985.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2713.379099342994,576.3,Gas,NG
+7987.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,60.5,Gas,NG
+7988.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2022.269237026008,250.5,Gas,NG
+7989.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2072.351625634279,141.0,Gas,NG
+7991.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2769.062952243126,169.3,Gas,NG
+7999.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,3195.939418950149,714.9000000000001,Gas,NG
+8000.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2769.062952243126,247.1,Gas,NG
+8002.0,Petroleum Liquids,Combustion turbine - aeroderivative,1974.0,50.0,0.0,414.0,Oil,RFO
+8006.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,4162.652606912713,1242.0,Gas,NG
+8007.0,Petroleum Liquids,Combustion turbine - aeroderivative,1974.0,50.0,0.0,567.0,Oil,KER
+8008.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1974.0,50.0,761.123315758641,71.2,Gas,NG
+8012.0,Petroleum Liquids,Combustion turbine - aeroderivative,1974.0,50.0,0.0,546.4,Oil,DFO
+8023.0,Conventional Steam Coal,Coal,1975.0,49.0,6587.176332747511,1112.0,Coal,SUB
+8027.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,1285.3921852387844,559.4000000000001,Gas,NG
+8031.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,602.8,Gas,NG
+8042.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,4162.652606912713,2491.2,Gas,NG
+8048.0,Natural Gas Steam Turbine,Oil/Gas steam,1974.0,50.0,4162.652606912713,1112.4,Gas,NG
+8049.0,Petroleum Liquids,Combustion turbine - aeroderivative,1997.0,27.0,4965.93140105008,1197.3000000000002,Oil,DFO
+8053.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,47.0,Gas,NG
+8054.0,Natural Gas Steam Turbine,Oil/Gas steam,1975.0,49.0,2081.3263034563565,781.4,Gas,NG
+8056.0,Natural Gas Steam Turbine,Oil/Gas steam,1975.0,49.0,4162.652606912713,932.0,Gas,NG
+8059.0,Natural Gas Fired Combined Cycle,Combined cycle,1974.0,50.0,2856.2882249560635,294.0,Gas,NG
+8066.0,Conventional Steam Coal,Coal,1975.0,49.0,13174.352665495022,2326.0,Coal,SUB
+8068.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,8428.625546758187,1326.0,Gas,NG
+8069.0,Conventional Steam Coal,Coal,1974.0,50.0,6587.176332747511,1015.5,Coal,BIT
+8102.0,Conventional Steam Coal,Coal,1974.0,50.0,6587.176332747511,2600.0,Coal,BIT
+8219.0,Conventional Steam Coal,Coal,1980.0,44.0,4582.444302360488,282.6,Coal,SUB
+8222.0,Conventional Steam Coal,Coal,1981.0,43.0,3293.5881663737555,450.0,Coal,LIG
+8223.0,Conventional Steam Coal,Coal,2006.0,18.0,11446.048070271445,1765.8000000000002,Coal,SUB
+8224.0,Conventional Steam Coal,Coal,1985.0,39.0,6587.176332747511,567.0,Coal,SUB
+8906.0,Natural Gas Steam Turbine,Oil/Gas steam,1961.0,63.0,9086.428529584067,1345.0,Gas,NG
+10030.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2346.9844089845556,118.0,Gas,NG
+10034.0,Natural Gas Fired Combined Cycle,Combined cycle,1987.0,37.0,1904.192149970709,130.0,Gas,NG
+10156.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,1283.3627809810464,70.80000000000001,Gas,NG
+10169.0,Natural Gas Fired Combined Cycle,Combined cycle,1989.0,35.0,1904.192149970709,55.8,Gas,NG
+10190.0,Natural Gas Fired Combined Cycle,Combined cycle,1992.0,32.0,1904.192149970709,72.0,Gas,NG
+10294.0,Natural Gas Fired Combined Cycle,Combined cycle,1989.0,35.0,1904.192149970709,133.2,Gas,NG
+10307.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,2856.2882249560635,386.09999999999997,Gas,NG
+10308.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,2856.2882249560635,430.20000000000005,Gas,NG
+10349.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1989.0,35.0,761.123315758641,49.5,Gas,NG
+10350.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2022.0,2.0,2725.169162506933,69.8,Gas,NG
+10405.0,Natural Gas Fired Combined Cycle,Combined cycle,1990.0,34.0,1904.192149970709,36.2,Gas,NG
+10617.0,Natural Gas Fired Combined Cycle,Combined cycle,1995.0,29.0,1904.192149970709,107.8,Gas,NG
+10620.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,1904.192149970709,62.9,Gas,NG
+10621.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,1904.192149970709,102.7,Gas,NG
+10633.0,Natural Gas Fired Combined Cycle,Combined cycle,1990.0,34.0,3808.384299941418,399.0,Gas,NG
+10649.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,761.123315758641,46.0,Gas,NG
+10650.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,761.123315758641,46.0,Gas,NG
+10678.0,Conventional Steam Coal,Coal,1999.0,25.0,2140.9114842454396,229.0,Coal,BIT
+10682.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,7107.057038874044,297.20000000000005,Gas,NG
+10725.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,4760.480374926772,446.0,Gas,NG
+10726.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,2856.2882249560635,260.9,Gas,NG
+10751.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,1904.192149970709,172.9,Gas,NG
+10761.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,7338.121862430773,358.9,Gas,NG
+10776.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1990.0,34.0,761.123315758641,48.5,Gas,NG
+10870.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1989.0,35.0,2530.414330251395,171.5,Gas,NG
+50006.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,8411.032367998778,974.1000000000001,Gas,NG
+50109.0,Natural Gas Fired Combined Cycle,Combined cycle,1989.0,35.0,2856.2882249560635,265.6,Gas,NG
+50137.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1984.0,40.0,761.123315758641,101.9,Gas,NG
+50243.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,186.8,Gas,NG
+50279.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2675.8998152422137,92.9,Gas,NG
+50292.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,5292.093864615732,240.0,Gas,NG
+50449.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,1904.192149970709,56.599999999999994,Gas,NG
+50450.0,Natural Gas Fired Combined Cycle,Combined cycle,1990.0,34.0,1904.192149970709,57.400000000000006,Gas,NG
+50451.0,Natural Gas Fired Combined Cycle,Combined cycle,1989.0,35.0,1904.192149970709,59.900000000000006,Gas,NG
+50458.0,Natural Gas Fired Combined Cycle,Combined cycle,1995.0,29.0,1904.192149970709,147.0,Gas,NG
+50555.0,Petroleum Liquids,Combustion turbine - aeroderivative,1990.0,34.0,0.0,180.0,Oil,DFO
+50558.0,Natural Gas Fired Combined Cycle,Combined cycle,1989.0,35.0,1904.192149970709,131.4,Gas,NG
+50561.0,Natural Gas Fired Combined Cycle,Combined cycle,1990.0,34.0,4064.773273390712,251.8,Gas,NG
+50612.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,761.123315758641,46.0,Gas,NG
+50625.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,13141.936287474395,677.8,Gas,NG
+50707.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,6664.672524897482,396.9,Gas,NG
+50744.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,1904.192149970709,65.3,Gas,NG
+50799.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,3808.384299941418,135.0,Gas,NG
+50815.0,Natural Gas Fired Combined Cycle,Combined cycle,1986.0,38.0,6664.672524897482,643.6,Gas,NG
+50865.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,761.123315758641,38.9,Gas,NG
+50949.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,4257.89092005321,470.1,Gas,NG
+50978.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,2856.2882249560635,122.6,Gas,NG
+51030.0,Natural Gas Fired Combined Cycle,Combined cycle,1990.0,34.0,2856.2882249560635,254.2,Gas,NG
+52019.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,9032.319124204916,1313.0,Gas,NG
+52026.0,Natural Gas Fired Combined Cycle,Combined cycle,1992.0,32.0,2871.687255090272,97.39999999999999,Gas,NG
+52087.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1992.0,32.0,2283.3699472759226,388.79999999999995,Gas,NG
+52088.0,Natural Gas Fired Combined Cycle,Combined cycle,1987.0,37.0,3808.384299941418,450.0,Gas,NG
+52176.0,Natural Gas Fired Combined Cycle,Combined cycle,1987.0,37.0,2856.2882249560635,230.0,Gas,NG
+54034.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,1904.192149970709,88.2,Gas,NG
+54041.0,Natural Gas Fired Combined Cycle,Combined cycle,1992.0,32.0,3808.384299941418,221.3,Gas,NG
+54076.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,1904.192149970709,90.6,Gas,NG
+54114.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,2856.2882249560635,121.2,Gas,NG
+54131.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,1904.192149970709,65.7,Gas,NG
+54149.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,761.123315758641,47.0,Gas,NG
+54271.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,2856.2882249560635,127.2,Gas,NG
+54324.0,Natural Gas Fired Combined Cycle,Combined cycle,1991.0,33.0,2856.2882249560635,254.2,Gas,NG
+54365.0,Natural Gas Fired Combined Cycle,Combined cycle,1995.0,29.0,2856.2882249560635,157.2,Gas,NG
+54426.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,1904.192149970709,127.7,Gas,NG
+54466.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,952.0960749853544,122.4,Gas,NG
+54476.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,1904.192149970709,125.5,Gas,NG
+54537.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,2856.2882249560635,285.5,Gas,NG
+54547.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,5712.576449912127,1086.1,Gas,NG
+54574.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,2856.2882249560635,285.6,Gas,NG
+54592.0,Natural Gas Fired Combined Cycle,Combined cycle,1992.0,32.0,1904.192149970709,104.1,Gas,NG
+54593.0,Natural Gas Fired Combined Cycle,Combined cycle,1992.0,32.0,1904.192149970709,67.3,Gas,NG
+54640.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,2856.2882249560635,236.8,Gas,NG
+54694.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,1904.192149970709,62.6,Gas,NG
+54749.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,1904.192149970709,51.400000000000006,Gas,NG
+54761.0,Natural Gas Fired Combined Cycle,Combined cycle,1996.0,28.0,3808.384299941418,621.2,Gas,NG
+54768.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1992.0,32.0,761.123315758641,46.0,Gas,NG
+54785.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1997.0,27.0,2725.950862633763,192.6,Gas,NG
+54805.0,Natural Gas Fired Combined Cycle,Combined cycle,1993.0,31.0,1904.192149970709,249.3,Gas,NG
+54817.0,Natural Gas Fired Combined Cycle,Combined cycle,1996.0,28.0,1904.192149970709,282.6,Gas,NG
+54832.0,Natural Gas Fired Combined Cycle,Combined cycle,1996.0,28.0,2856.2882249560635,288.8,Gas,NG
+54844.0,Natural Gas Fired Combined Cycle,Combined cycle,1994.0,30.0,3808.384299941418,300.4,Gas,NG
+54854.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1991.0,33.0,2283.3699472759226,222.0,Gas,NG
+54914.0,Natural Gas Fired Combined Cycle,Combined cycle,1996.0,28.0,3808.384299941418,322.0,Gas,NG
+54915.0,Natural Gas Fired Combined Cycle,Combined cycle,1995.0,29.0,1904.192149970709,138.1,Gas,NG
+55010.0,Natural Gas Fired Combined Cycle,Combined cycle,1997.0,27.0,1774.6538545533958,283.5,Gas,NG
+55011.0,Natural Gas Fired Combined Cycle,Combined cycle,1997.0,27.0,1774.6538545533958,283.5,Gas,NG
+55015.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1997.0,27.0,2825.7798816315826,572.0,Gas,NG
+55026.0,Natural Gas Fired Combined Cycle,Combined cycle,1999.0,25.0,871.6428275290216,200.0,Gas,NG
+55029.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,644.4280679933665,192.3,Gas,NG
+55031.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,1929.3355153252385,163.5,Gas,NG
+55039.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,640.4793793385054,150.0,Gas,NG
+55040.0,Natural Gas Fired Combined Cycle,Combined cycle,1997.0,27.0,2656.8011068343208,323.0,Gas,NG
+55041.0,Natural Gas Fired Combined Cycle,Combined cycle,1999.0,25.0,871.6428275290216,289.0,Gas,NG
+55042.0,Natural Gas Fired Combined Cycle,Combined cycle,1999.0,25.0,2635.9373320908717,520.0,Gas,NG
+55043.0,Natural Gas Fired Combined Cycle,Combined cycle,1998.0,26.0,1764.29450456185,101.2,Gas,NG
+55047.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,4362.865962299702,815.0,Gas,NG
+55048.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,1732.3809718252346,290.1,Gas,NG
+55061.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3553.0115498503246,1099.2,Gas,NG
+55062.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,3464.761943650469,939.6999999999999,Gas,NG
+55063.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,5197.142915475703,891.0,Gas,NG
+55064.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,1287.1241606127587,243.9,Gas,NG
+55065.0,Natural Gas Fired Combined Cycle,Combined cycle,1999.0,25.0,2609.4761409706607,521.0,Gas,NG
+55068.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,2598.571457737852,550.2,Gas,NG
+55075.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,1600.629644426688,230.4,Gas,NG
+55077.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,2598.571457737852,537.3,Gas,NG
+55079.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,1600.629644426688,427.5,Gas,NG
+55081.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,2577.712271973466,460.0,Gas,NG
+55086.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,2598.571457737852,432.0,Gas,NG
+55087.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3571.9383279195404,968.1999999999999,Gas,NG
+55088.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,2245.0577124200545,509.90000000000003,Gas,NG
+55089.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3177.0550724637683,894.2,Gas,NG
+55091.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,5065.391588077157,1734.0,Gas,NG
+55097.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,5197.142915475703,1112.6,Gas,NG
+55098.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,2609.4761409706607,529.0,Gas,NG
+55100.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,1732.3809718252346,274.5,Gas,NG
+55101.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,644.4280679933665,77.4,Gas,NG
+55102.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,2577.712271973466,170.1,Gas,NG
+55103.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,501.5,Gas,NG
+55107.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,596.0,Gas,NG
+55109.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,2573.763583318605,415.5,Gas,NG
+55110.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,5123.835034708043,692.0,Gas,NG
+55111.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,5123.835034708043,692.0,Gas,NG
+55112.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,636.0,Gas,NG
+55116.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,3202.3968966925268,977.5,Gas,NG
+55117.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,493.0,Gas,NG
+55123.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,801.0,Gas,NG
+55124.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,655.0,Gas,NG
+55126.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,1804.1383903792785,578.0,Gas,NG
+55127.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,300.0,Gas,NG
+55128.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1783.7205353575707,494.09999999999997,Gas,NG
+55129.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,5126.113629146965,745.1,Gas,NG
+55131.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,6354.110144927537,1256.0,Gas,NG
+55132.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,3201.259288853376,939.5999999999999,Gas,NG
+55135.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,371.0,Gas,NG
+55137.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3177.0550724637683,940.2,Gas,NG
+55139.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,788.4000000000001,Gas,NG
+55141.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1783.7205353575707,495.0,Gas,NG
+55144.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3177.0550724637683,989.0,Gas,NG
+55146.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,903.9000000000001,Gas,NG
+55148.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,242.0,Gas,NG
+55149.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,840.0,Gas,NG
+55151.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3622.6198083067093,1156.0,Gas,NG
+55153.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,5197.142915475703,1088.2,Gas,NG
+55154.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,609.0,Gas,NG
+55164.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1769.2910144927537,624.0,Gas,NG
+55165.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1235.0528911243623,358.8,Gas,NG
+55166.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,3110.58516158723,985.0,Gas,NG
+55168.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,618.7,Gas,NG
+55170.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,790.0,Gas,NG
+55172.0,Natural Gas Fired Combined Cycle,Combined cycle,2010.0,14.0,4701.436118570316,807.0,Gas,NG
+55173.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,1389.1999999999998,Gas,NG
+55176.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,467.7,Gas,NG
+55177.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,708.0,Gas,NG
+55178.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2394.89341254263,655.2,Gas,NG
+55179.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,1600.629644426688,301.5,Gas,NG
+55182.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2506.2845965033653,685.2,Gas,NG
+55183.0,Natural Gas Fired Combined Cycle,Combined cycle,2015.0,9.0,4692.103428571429,627.5,Gas,NG
+55187.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3977.3698946771124,918.3,Gas,NG
+55188.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,611.2,Gas,NG
+55192.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1778.9106950692985,580.0,Gas,NG
+55193.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,728.0,Gas,NG
+55196.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,1288.856135986733,87.6,Gas,NG
+55197.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,5433.929712460064,801.0,Gas,NG
+55198.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2963.24787835274,1150.0,Gas,NG
+55199.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1999.0,25.0,5550.5798309027505,1728.0,Gas,NG
+55200.0,Natural Gas Fired Combined Cycle,Combined cycle,2000.0,24.0,2526.644739941177,194.0,Gas,NG
+55201.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,270.0,Gas,NG
+55202.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,4940.211564497449,380.0,Gas,NG
+55204.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,270.0,Gas,NG
+55206.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,593.3,Gas,NG
+55207.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1235.0528911243623,142.2,Gas,NG
+55210.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,1718.3949659349914,287.0,Gas,NG
+55211.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,1588.5275362318841,578.0,Gas,NG
+55212.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,1600.629644426688,578.0,Gas,NG
+55215.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,4801.888933280064,1152.8,Gas,NG
+55217.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,678.3,Gas,NG
+55218.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,3763.5290478934985,600.4,Gas,NG
+55220.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,551.3,Gas,NG
+55221.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,7148.373913043479,599.5,Gas,NG
+55222.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,5123.835034708043,692.0,Gas,NG
+55223.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,1588.5275362318841,418.0,Gas,NG
+55224.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,500.4,Gas,NG
+55225.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,5099.756160577858,1214.0,Gas,NG
+55226.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,1036.0,Gas,NG
+55228.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,236.0,Gas,NG
+55229.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2378.2940471434276,236.0,Gas,NG
+55230.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,6826.338870431893,1280.0,Gas,NG
+55231.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,614.0,Gas,NG
+55232.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,4718.109371980677,688.0,Gas,NG
+55233.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2972.8675589292843,294.5,Gas,NG
+55234.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,4756.588094286855,814.4,Gas,NG
+55236.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,4756.588094286855,692.0,Gas,NG
+55237.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,5032.023299602746,483.0,Gas,NG
+55238.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,316.0,Gas,NG
+55239.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3177.0550724637683,821.0999999999999,Gas,NG
+55241.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,1600.629644426688,280.0,Gas,NG
+55242.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,1811.3099041533546,274.5,Gas,NG
+55244.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,3202.3968966925268,409.0,Gas,NG
+55247.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3557.821390138597,564.0,Gas,NG
+55250.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3567.441070715141,353.4,Gas,NG
+55251.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1921.4381380155162,567.8,Gas,NG
+55253.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,356.0,Gas,NG
+55259.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,576.8,Gas,NG
+55262.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,49.5,Gas,NG
+55263.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,49.5,Gas,NG
+55264.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,49.5,Gas,NG
+55267.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,701.2,Gas,NG
+55269.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,5433.929712460064,903.9000000000001,Gas,NG
+55270.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,7148.373913043479,649.0,Gas,NG
+55271.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3177.0550724637683,939.4,Gas,NG
+55276.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3567.441070715141,519.0,Gas,NG
+55279.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,5940.925277570296,1086.2,Gas,NG
+55282.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,713.0,Gas,NG
+55283.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,554.3,Gas,NG
+55284.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3567.441070715141,353.4,Gas,NG
+55285.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2972.8675589292843,285.0,Gas,NG
+55286.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,3003.048552066331,994.4000000000001,Gas,NG
+55292.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3288.4462564245036,902.4000000000001,Gas,NG
+55293.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3619.0340514196714,900.0,Gas,NG
+55294.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,563.9,Gas,NG
+55295.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,591.0,Gas,NG
+55296.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,312.8,Gas,NG
+55297.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,5412.4151711378345,1176.0,Gas,NG
+55298.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,5412.4151711378345,1338.0,Gas,NG
+55299.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3581.7803204687098,923.8,Gas,NG
+55304.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,2561.9175173540216,242.0,Gas,NG
+55306.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,619.0,Gas,NG
+55317.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,872.2,Gas,NG
+55320.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,821.7,Gas,NG
+55322.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,5553.534883720929,1465.6,Gas,NG
+55327.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3177.0550724637683,932.9000000000001,Gas,NG
+55328.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,689.4,Gas,NG
+55332.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2763.1355008457053,795.6,Gas,NG
+55333.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,3177.0550724637683,943.5,Gas,NG
+55334.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,702.1,Gas,NG
+55337.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,777.5999999999999,Gas,NG
+55340.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,2772.3935934571477,679.1,Gas,NG
+55343.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,2776.7674418604647,650.0,Gas,NG
+55345.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,4171.753972075108,688.5,Gas,NG
+55347.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,688.0,Gas,NG
+55348.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,795.6,Gas,NG
+55349.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,344.0,Gas,NG
+55350.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,4027.324431558065,678.3,Gas,NG
+55357.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,675.6,Gas,NG
+55358.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,7245.239616613419,1433.6,Gas,NG
+55364.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2494.1824883085615,619.4,Gas,NG
+55365.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2378.2940471434276,236.0,Gas,NG
+55372.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,5412.4151711378345,1277.1,Gas,NG
+55375.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,2776.7674418604647,595.0,Gas,NG
+55377.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,1280.9587586770108,87.6,Gas,NG
+55380.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,10867.859424920127,2428.0,Gas,NG
+55381.0,Petroleum Liquids,Combustion turbine - aeroderivative,2000.0,24.0,0.0,402.5,Oil,DFO
+55382.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,1192.0,Gas,NG
+55386.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,668.5,Gas,NG
+55391.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1783.7205353575707,561.0,Gas,NG
+55392.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1870.3112182065956,596.7,Gas,NG
+55393.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2769.062952243126,635.0,Gas,NG
+55395.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,306.4,Gas,NG
+55397.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,714.9000000000001,Gas,NG
+55400.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,623.0,Gas,NG
+55401.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,3453.9193760571316,977.5,Gas,NG
+55402.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,782.0,Gas,NG
+55404.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,555.0,Gas,NG
+55405.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,5416.000928024874,1221.6000000000001,Gas,NG
+55406.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,596.6,Gas,NG
+55409.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,2763.1355008457053,748.0,Gas,NG
+55411.0,Natural Gas Fired Combined Cycle,Combined cycle,2010.0,14.0,4105.276506955178,822.8,Gas,NG
+55412.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,644.2,Gas,NG
+55414.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1769.2910144927537,541.2,Gas,NG
+55415.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,728.0,Gas,NG
+55417.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,456.0,Gas,NG
+55418.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,714.8,Gas,NG
+55419.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,4510.345975948196,987.0,Gas,NG
+55433.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,416.0,Gas,NG
+55438.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,540.0,Gas,NG
+55439.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,3608.276780758557,1011.4,Gas,NG
+55440.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3622.6198083067093,927.1,Gas,NG
+55447.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2378.2940471434276,162.8,Gas,NG
+55451.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,5433.929712460064,1003.5,Gas,NG
+55453.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,3567.441070715141,228.0,Gas,NG
+55455.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,1140.3000000000002,Gas,NG
+55457.0,Natural Gas Fired Combined Cycle,Combined cycle,2001.0,23.0,2400.944466640032,551.3,Gas,NG
+55460.0,Natural Gas Fired Combined Cycle,Combined cycle,2022.0,2.0,3627.881447587354,1174.4,Gas,NG
+55463.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,7216.553561517114,1433.6,Gas,NG
+55464.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,5710.4554517457545,1176.0,Gas,NG
+55467.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,903.9000000000001,Gas,NG
+55470.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,5013.20446566508,861.0,Gas,NG
+55477.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,40.0,Gas,NG
+55478.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,40.0,Gas,NG
+55479.0,Conventional Steam Coal,Coal,2003.0,21.0,1916.0817515504602,90.0,Coal,SUB
+55480.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,7245.239616613419,1894.2,Gas,NG
+55481.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,691.6,Gas,NG
+55482.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,1804.1383903792785,302.8,Gas,NG
+55486.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2020.0,4.0,2725.169162506933,399.6,Gas,NG
+55496.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,4144.703251268558,684.0,Gas,NG
+55499.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,60.5,Gas,NG
+55501.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,5433.929712460064,1370.0,Gas,NG
+55502.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,5412.4151711378345,1232.0,Gas,NG
+55503.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3622.6198083067093,921.5999999999999,Gas,NG
+55504.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,154.2,Gas,NG
+55505.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,154.2,Gas,NG
+55508.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,60.5,Gas,NG
+55510.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,60.5,Gas,NG
+55512.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,48.7,Gas,NG
+55513.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,58.9,Gas,NG
+55514.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,600.6,Gas,NG
+55516.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,714.9000000000001,Gas,NG
+55517.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,5698.036721436217,350.0,Gas,NG
+55518.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3622.6198083067093,960.0,Gas,NG
+55522.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,5897.636714975845,605.0,Gas,NG
+55524.0,Natural Gas Fired Combined Cycle,Combined cycle,2019.0,5.0,9027.310019015924,1449.4,Gas,NG
+55538.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2014.0,10.0,1265.5277576460355,54.0,Gas,NG
+55540.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,594.5735117858569,37.2,Gas,NG
+55541.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1783.7205353575707,149.7,Gas,NG
+55542.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,99.8,Gas,NG
+55544.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,117.6,Gas,NG
+55558.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,1588.5275362318841,66.5,Gas,NG
+55620.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2977.3648161336832,824.1,Gas,NG
+55622.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2958.4380380644675,217.0,Gas,NG
+55625.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,47.0,Gas,NG
+55626.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,47.0,Gas,NG
+55627.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,47.0,Gas,NG
+55640.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,7077.164057971014,726.0,Gas,NG
+55641.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,674.9000000000001,Gas,NG
+55645.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,1381.5677504228527,397.8,Gas,NG
+55651.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,2378.2940471434276,346.0,Gas,NG
+55654.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,87.6,Gas,NG
+55656.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,4615.10492040521,779.0,Gas,NG
+55661.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,2382.791304347826,605.5,Gas,NG
+55662.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,593.3,Gas,NG
+55664.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,570.0,Gas,NG
+55667.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,651.6,Gas,NG
+55672.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,4718.109371980677,692.0,Gas,NG
+55687.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,688.4,Gas,NG
+55690.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,6911.0660647312125,1153.0,Gas,NG
+55694.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,2776.7674418604647,850.5,Gas,NG
+55698.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,92.2,Gas,NG
+55699.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,60.5,Gas,NG
+55700.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,2130.626279300099,319.0,Gas,NG
+55701.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,4027.324431558065,739.5,Gas,NG
+55706.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3622.6198083067093,899.0,Gas,NG
+55710.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,556.0,Gas,NG
+55714.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2771.631115448906,746.0,Gas,NG
+55718.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,2359.0546859903384,357.6,Gas,NG
+55733.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,642.6960926193922,172.8,Gas,NG
+55736.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,5433.929712460064,1429.8000000000002,Gas,NG
+55738.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,88.0,Gas,NG
+55748.0,Natural Gas Fired Combined Cycle,Combined cycle,2013.0,11.0,4821.915962152863,306.1,Gas,NG
+55749.0,Conventional Steam Coal,Coal,2006.0,18.0,1942.7383720930231,115.7,Coal,SUB
+55786.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,100.0,Gas,NG
+55787.0,Petroleum Liquids,Combustion turbine - aeroderivative,2002.0,22.0,0.0,100.0,Oil,KER
+55801.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,3608.276780758557,836.0999999999999,Gas,NG
+55802.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2008.0,16.0,742.4437107956421,159.5,Gas,NG
+55807.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,1179.5273429951692,98.0,Gas,NG
+55810.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1778.9106950692985,135.0,Gas,NG
+55818.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,1588.5275362318841,318.3,Gas,NG
+55821.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,2716.9648562300317,688.3,Gas,NG
+55835.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,685.0999999999999,Gas,NG
+55836.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,688.7892691951896,60.5,Gas,NG
+55841.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,2706.2075855689177,664.7,Gas,NG
+55847.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,47.0,Gas,NG
+55855.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,47.0,Gas,NG
+55856.0,Conventional Steam Coal,Coal,2012.0,12.0,7665.326415382268,1766.0,Coal,BIT
+55927.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,3608.276780758557,1068.2,Gas,NG
+55933.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,3153.751381339376,336.1,Gas,NG
+55936.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2002.0,22.0,589.7636714975846,168.0,Gas,NG
+55938.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,1381.5677504228527,383.0,Gas,NG
+55939.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,4771.751848093926,1472.2,Gas,NG
+55951.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,60.5,Gas,NG
+55963.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,690.7838752114263,47.0,Gas,NG
+55965.0,Natural Gas Fired Combined Cycle,Combined cycle,2002.0,22.0,4765.582608695652,1239.0,Gas,NG
+55969.0,Petroleum Liquids,Combustion turbine - aeroderivative,2003.0,21.0,0.0,54.0,Oil,KER
+55970.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,2776.7674418604647,556.8,Gas,NG
+55972.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2003.0,21.0,1381.5677504228527,345.0,Gas,NG
+55976.0,Natural Gas Fired Combined Cycle,Combined cycle,2003.0,21.0,3622.6198083067093,898.0,Gas,NG
+55977.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,1846.041968162084,67.0,Gas,NG
+55985.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,2771.631115448906,559.0,Gas,NG
+56013.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,2021.5724044663716,181.5,Gas,NG
+56018.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,1377.5785383903792,98.6,Gas,NG
+56026.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2769.062952243126,154.0,Gas,NG
+56031.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2771.631115448906,618.8,Gas,NG
+56032.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2004.0,20.0,1377.5785383903792,120.0,Gas,NG
+56041.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2769.062952243126,130.0,Gas,NG
+56046.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,1846.041968162084,387.6,Gas,NG
+56047.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,841.5,Gas,NG
+56068.0,Conventional Steam Coal,Coal,2010.0,14.0,6882.091992609337,1402.6,Coal,SUB
+56078.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,2776.7674418604647,300.6,Gas,NG
+56102.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,2771.631115448906,566.9,Gas,NG
+56104.0,Natural Gas Fired Combined Cycle,Combined cycle,2006.0,18.0,3060.472110436094,740.8,Gas,NG
+56108.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,1285.3921852387844,100.8,Gas,NG
+56135.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2006.0,18.0,1291.829457364341,121.0,Gas,NG
+56143.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2006.0,18.0,3976.887313731643,196.0,Gas,NG
+56150.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,5538.125904486252,1376.6000000000001,Gas,NG
+56151.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,1928.0882778581765,351.0,Gas,NG
+56164.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,1847.1521819000914,334.5,Gas,NG
+56166.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,1285.3921852387844,346.8,Gas,NG
+56177.0,Natural Gas Fired Combined Cycle,Combined cycle,2004.0,20.0,1804.1383903792785,140.0,Gas,NG
+56188.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,1846.041968162084,82.0,Gas,NG
+56196.0,Natural Gas Fired Combined Cycle,Combined cycle,2005.0,19.0,2769.062952243126,528.0,Gas,NG
+56224.0,Conventional Steam Coal,Coal,2008.0,16.0,2236.6896665566196,242.0,Coal,SUB
+56227.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,1848.2623956380985,483.0,Gas,NG
+56232.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,1610.1911977389555,106.0,Gas,NG
+56234.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,2781.169314716739,348.9,Gas,NG
+56237.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,6351.207479527591,1246.5,Gas,NG
+56238.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2006.0,18.0,1388.3584394778127,216.4,Gas,NG
+56239.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2005.0,19.0,1285.3921852387844,121.0,Gas,NG
+56241.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2008.0,16.0,1484.8874215912842,346.8,Gas,NG
+56249.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,3863.9631964559553,343.8,Gas,NG
+56253.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2006.0,18.0,1599.5773252818612,80.0,Gas,NG
+56259.0,Natural Gas Fired Combined Cycle,Combined cycle,2010.0,14.0,4105.276506955178,653.7,Gas,NG
+56283.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2006.0,18.0,1291.829457364341,100.8,Gas,NG
+56292.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,4491.950099610732,343.8,Gas,NG
+56298.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,5497.562755964081,225.0,Gas,NG
+56319.0,Conventional Steam Coal,Coal,2008.0,16.0,2236.6896665566196,95.0,Coal,SUB
+56326.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,2561.889363988932,472.1,Gas,NG
+56328.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,2575.97546430397,349.0,Gas,NG
+56349.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,5426.234269339081,550.4,Gas,NG
+56350.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,7891.668572439799,654.1,Gas,NG
+56397.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,640.4793793385054,44.0,Gas,NG
+56400.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,2130.626279300099,411.4,Gas,NG
+56407.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,16524.105830295528,4263.0,Gas,NG
+56445.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,1287.987732151985,420.0,Gas,NG
+56456.0,Conventional Steam Coal,Coal,2010.0,14.0,3034.7792890262754,720.0,Coal,SUB
+56458.0,Natural Gas Fired Combined Cycle,Combined cycle,2008.0,16.0,3938.383129745791,681.5,Gas,NG
+56467.0,Natural Gas Fired Combined Cycle,Combined cycle,2013.0,11.0,3597.8884615384613,655.0,Gas,NG
+56471.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,1336.6737372195942,49.8,Gas,NG
+56472.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,643.9938660759925,49.8,Gas,NG
+56473.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,643.9938660759925,49.8,Gas,NG
+56474.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,643.9938660759925,49.8,Gas,NG
+56475.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2007.0,17.0,643.9938660759925,49.8,Gas,NG
+56476.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,4171.753972075108,619.7,Gas,NG
+56480.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2011.0,13.0,1342.528928183651,60.4,Gas,NG
+56482.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2008.0,16.0,1484.8874215912842,121.0,Gas,NG
+56502.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2008.0,16.0,5647.2087642173365,730.1999999999999,Gas,NG
+56505.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2000.0,24.0,3264.1132566126576,224.3,Gas,NG
+56532.0,Natural Gas Fired Combined Cycle,Combined cycle,2010.0,14.0,4105.276506955178,712.4,Gas,NG
+56556.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2010.0,14.0,1907.3251931993818,120.0,Gas,NG
+56564.0,Conventional Steam Coal,Coal,2012.0,12.0,3832.663207691134,609.0,Coal,SUB
+56569.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2008.0,16.0,1484.8874215912842,121.0,Gas,NG
+56596.0,Conventional Steam Coal,Coal,2010.0,14.0,3034.7792890262754,116.0,Coal,SUB
+56603.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,170.0,Gas,NG
+56604.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2001.0,23.0,1189.1470235717138,173.0,Gas,NG
+56606.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2010.0,14.0,953.6625965996909,108.2,Gas,NG
+56609.0,Conventional Steam Coal,Coal,2011.0,13.0,3847.312703583061,483.7,Coal,SUB
+56610.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,2684.8829543720435,324.0,Gas,NG
+56611.0,Conventional Steam Coal,Coal,2013.0,11.0,3765.6221893491124,1008.0,Coal,SUB
+56629.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2009.0,15.0,967.4951051195634,96.0,Gas,NG
+56639.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2009.0,15.0,1934.9902102391268,139.8,Gas,NG
+56671.0,Conventional Steam Coal,Coal,2011.0,13.0,3847.312703583061,807.5,Coal,BIT
+56674.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2010.0,14.0,3814.6503863987637,242.0,Gas,NG
+56798.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,4049.571428571428,693.0,Gas,NG
+56799.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2011.0,13.0,2685.057856367302,380.8,Gas,NG
+56803.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2009.0,15.0,3869.9804204782536,432.0,Gas,NG
+56806.0,Natural Gas Fired Combined Cycle,Combined cycle,2009.0,15.0,4171.753972075108,535.5,Gas,NG
+56807.0,Natural Gas Fired Combined Cycle,Combined cycle,2011.0,13.0,4049.571428571428,559.0,Gas,NG
+56846.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,775.3,Gas,NG
+56908.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2011.0,13.0,4027.586784550953,203.10000000000002,Gas,NG
+56914.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2010.0,14.0,1907.3251931993818,118.0,Gas,NG
+56940.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,770.0,Gas,NG
+56948.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2011.0,13.0,16110.34713820381,726.0,Gas,NG
+56963.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,3578.813886070445,754.6,Gas,NG
+56964.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2018.0,6.0,13418.559060263688,644.0,Gas,NG
+56998.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,12089.034383322552,440.0,Gas,NG
+57001.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2010.0,14.0,953.6625965996909,60.5,Gas,NG
+57027.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2011.0,13.0,5370.115712734604,200.0,Gas,NG
+57028.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,2684.8829543720435,318.5,Gas,NG
+57029.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,5346.694948878377,736.0,Gas,NG
+57037.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,3578.813886070445,840.0,Gas,NG
+57185.0,Natural Gas Fired Combined Cycle,Combined cycle,2020.0,4.0,7255.762895174707,1312.4999999999998,Gas,NG
+57267.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,5087.923076923077,828.0,Gas,NG
+57349.0,Natural Gas Fired Combined Cycle,Combined cycle,2015.0,9.0,2346.0517142857143,361.0,Gas,NG
+57482.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,10175.846153846154,800.0,Gas,NG
+57483.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2012.0,12.0,5346.694948878377,199.6,Gas,NG
+57515.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,6359.903846153847,500.0,Gas,NG
+57555.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2016.0,8.0,4083.114137301699,395.40000000000003,Gas,NG
+57564.0,Natural Gas Fired Combined Cycle,Combined cycle,2007.0,17.0,2266.572675005071,61.5,Gas,NG
+57703.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,4844.341643716481,140.0,Gas,NG
+57794.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,780.0,Gas,NG
+57839.0,Natural Gas Fired Combined Cycle,Combined cycle,2015.0,9.0,3519.0775714285714,772.9,Gas,NG
+57842.0,Natural Gas Fired Combustion Turbine,Combustion turbine,1995.0,29.0,761.123315758641,192.0,Gas,NG
+57865.0,Natural Gas Internal Combustion Engine,Internal combustion engine,2011.0,13.0,0.0,167.40000000000003,Gas,NG
+57881.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,3803.03628452284,293.1000000000001,Gas,NG
+57943.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,7848.871084419739,363.0,Gas,NG
+57978.0,Natural Gas Fired Combined Cycle,Combined cycle,2012.0,12.0,2684.8829543720435,288.9,Gas,NG
+58001.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,7097.891457499016,1606.4,Gas,NG
+58005.0,Natural Gas Fired Combined Cycle,Combined cycle,2014.0,10.0,3578.813886070445,803.2,Gas,NG
+58079.0,Natural Gas Fired Combined Cycle,Combined cycle,2015.0,9.0,3519.0775714285714,735.0,Gas,NG
+58122.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,1271.9807692307693,60.5,Gas,NG
+58235.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2015.0,9.0,1244.5682857142858,73.0,Gas,NG
+58236.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,705.9,Gas,NG
+58260.0,Natural Gas Fired Combined Cycle,Combined cycle,2016.0,8.0,4833.940193738594,1472.2,Gas,NG
+58284.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2015.0,9.0,1244.5682857142858,42.3,Gas,NG
+58325.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2015.0,9.0,1244.5682857142858,122.0,Gas,NG
+58378.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2013.0,11.0,1271.9807692307693,82.2,Gas,NG
+58420.0,Natural Gas Fired Combined Cycle,Combined cycle,2016.0,8.0,2416.970096869297,870.0,Gas,NG
+58426.0,Natural Gas Fired Combined Cycle,Combined cycle,2016.0,8.0,2416.970096869297,870.0,Gas,NG
+58427.0,Natural Gas Fired Combined Cycle,Combined cycle,2013.0,11.0,3597.8884615384613,98.0,Gas,NG
+58471.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2015.0,9.0,2489.1365714285716,358.8,Gas,NG
+58478.0,Natural Gas Fired Combined Cycle,Combined cycle,2016.0,8.0,2416.970096869297,74.1,Gas,NG
+58503.0,Natural Gas Fired Combined Cycle,Combined cycle,2016.0,8.0,2416.970096869297,500.0,Gas,NG
+58562.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2015.0,9.0,5211.2126629630375,527.2,Gas,NG
+58933.0,Natural Gas Fired Combined Cycle,Combined cycle,2021.0,3.0,6046.469079312256,309.8,Gas,NG
+59004.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,812.0,Gas,NG
+59093.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,149.4,Gas,NG
+59220.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,1113.6,Gas,NG
+59325.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,2418.5876317249026,543.9,Gas,NG
+59326.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,2418.5876317249026,543.9,Gas,NG
+59764.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,1061.5,Gas,NG
+59773.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,832.3,Gas,NG
+59812.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,1231.2,Gas,NG
+59882.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2019.0,5.0,2725.169162506933,263.6,Gas,NG
+59906.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,2418.5876317249026,1105.0,Gas,NG
+59913.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,4837.175263449805,1773.3000000000002,Gas,NG
+59926.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2016.0,8.0,2722.076091534466,453.8,Gas,NG
+60122.0,Natural Gas Fired Combined Cycle,Combined cycle,2017.0,7.0,3627.881447587354,1230.3,Gas,NG
+60264.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2018.0,6.0,8175.507487520798,427.2,Gas,NG
+60302.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,830.6,Gas,NG
+60345.0,Natural Gas Fired Combined Cycle,Combined cycle,2019.0,5.0,4837.175263449805,1723.1000000000001,Gas,NG
+60356.0,Natural Gas Fired Combined Cycle,Combined cycle,2021.0,3.0,4837.175263449805,1210.3999999999999,Gas,NG
+60357.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,1498.5,Gas,NG
+60368.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,4837.175263449805,1194.4,Gas,NG
+60376.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,962.0,Gas,NG
+60387.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2023.0,1.0,2725.169162506933,380.0,Gas,NG
+60459.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2017.0,7.0,2725.169162506933,121.0,Gas,NG
+60460.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2017.0,7.0,2725.169162506933,121.0,Gas,NG
+60464.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,3627.881447587354,1134.0,Gas,NG
+60468.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2018.0,6.0,1362.5845812534665,121.5,Gas,NG
+60589.0,Natural Gas Fired Combined Cycle,Combined cycle,2019.0,5.0,3627.881447587354,1197.0,Gas,NG
+60698.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2020.0,4.0,2725.169162506933,141.0,Gas,NG
+60903.0,Natural Gas Fired Combined Cycle,Combined cycle,2018.0,6.0,4837.175263449805,798.2,Gas,NG
+60925.0,Natural Gas Fired Combined Cycle,Combined cycle,2021.0,3.0,3627.881447587354,1000.0,Gas,NG
+60926.0,Natural Gas Fired Combined Cycle,Combined cycle,2019.0,5.0,3627.881447587354,1000.0,Gas,NG
+60927.0,Natural Gas Fired Combined Cycle,Combined cycle,2020.0,4.0,3627.881447587354,1000.0,Gas,NG
+61028.0,Natural Gas Fired Combined Cycle,Combined cycle,2020.0,4.0,3627.881447587354,1033.7,Gas,NG
+61035.0,Natural Gas Fired Combined Cycle,Combined cycle,2019.0,5.0,1209.2938158624513,525.0,Gas,NG
+61144.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2021.0,3.0,1362.5845812534665,349.0,Gas,NG
+61241.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2020.0,4.0,2725.169162506933,100.0,Gas,NG
+61242.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2019.0,5.0,2725.169162506933,100.0,Gas,NG
+61322.0,Natural Gas Fired Combined Cycle,Combined cycle,2021.0,3.0,1209.2938158624513,521.9,Gas,NG
+61966.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2022.0,2.0,2725.169162506933,100.0,Gas,NG
+62192.0,Natural Gas Fired Combined Cycle,Combined cycle,2022.0,2.0,3627.881447587354,1267.4,Gas,NG
+62548.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2022.0,2.0,2725.169162506933,100.0,Gas,NG
+62565.0,Natural Gas Fired Combined Cycle,Combined cycle,2021.0,3.0,1209.2938158624513,664.7,Gas,NG
+62926.0,Natural Gas Fired Combined Cycle,Combined cycle,2022.0,2.0,2418.5876317249026,1288.6,Gas,NG
+62949.0,Natural Gas Fired Combined Cycle,Combined cycle,2023.0,1.0,3627.881447587354,2055.0,Gas,NG
+63259.0,Natural Gas Fired Combined Cycle,Combined cycle,2022.0,2.0,4990.46602884082,263.2,Gas,NG
+63335.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2021.0,3.0,10900.676650027732,484.0,Gas,NG
+63688.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2021.0,3.0,13625.845812534664,605.0,Gas,NG
+63931.0,Natural Gas Fired Combined Cycle,Combined cycle,2023.0,1.0,2418.5876317249026,1300.0,Gas,NG
+64383.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2022.0,2.0,10900.676650027732,484.0,Gas,NG
+65372.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2022.0,2.0,8175.507487520798,363.0,Gas,NG
+65373.0,Natural Gas Fired Combustion Turbine,Combustion turbine,2023.0,1.0,8175.507487520798,363.0,Gas,NG

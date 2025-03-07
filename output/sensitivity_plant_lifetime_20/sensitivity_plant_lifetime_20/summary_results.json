@@ -1,0 +1,134 @@
+{
+  "total_emissions_gt": 0.8713238303419628,
+  "negative_cost_emissions_gt": 0.09675982378081285,
+  "negative_cost_percentage": 11.104921088045778,
+  "facility_count": 958,
+  "transitions": [
+    {
+      "transition": "Coal to NGCC",
+      "emissions": 0.3861981836738629,
+      "macc": 25.820907215236456,
+      "facility_id": 145
+    },
+    {
+      "transition": "Gas to Wind",
+      "emissions": 0.1761913312035199,
+      "macc": 182.44882955415787,
+      "facility_id": 279
+    },
+    {
+      "transition": "Gas to Solar",
+      "emissions": 0.1536516004339497,
+      "macc": 319.3829073714002,
+      "facility_id": 125
+    },
+    {
+      "transition": "Gas to NGCC",
+      "emissions": 0.07375511761672902,
+      "macc": -173.7770202547105,
+      "facility_id": 352
+    },
+    {
+      "transition": "Coal to Wind",
+      "emissions": 0.05687100762877302,
+      "macc": 83.71622197052898,
+      "facility_id": 14
+    },
+    {
+      "transition": "Coal to Solar",
+      "emissions": 0.021376512685208772,
+      "macc": 267.28021052131766,
+      "facility_id": 4
+    },
+    {
+      "transition": "Oil to NGCC",
+      "emissions": 0.0031193891949378386,
+      "macc": 70.57497421979981,
+      "facility_id": 31
+    },
+    {
+      "transition": "Oil to Wind",
+      "emissions": 0.0001606535272174176,
+      "macc": 77.61020982907921,
+      "facility_id": 7
+    },
+    {
+      "transition": "Oil to Solar",
+      "emissions": 3.4377764206500005e-08,
+      "macc": 306.5540459124427,
+      "facility_id": 1
+    }
+  ],
+  "by_source": [
+    {
+      "from_fuel": "Coal",
+      "emissions": 0.4644457039878447,
+      "facility_id": 163,
+      "percentage": 53.303454790805695
+    },
+    {
+      "from_fuel": "Gas",
+      "emissions": 0.4035980492541986,
+      "facility_id": 756,
+      "percentage": 46.320097672044746
+    },
+    {
+      "from_fuel": "Oil",
+      "emissions": 0.0032800770999194626,
+      "facility_id": 39,
+      "percentage": 0.3764475371495523
+    }
+  ],
+  "by_target": [
+    {
+      "to_tech": "NGCC",
+      "emissions": 0.4630726904855298,
+      "facility_id": 528,
+      "percentage": 53.145876924287805
+    },
+    {
+      "to_tech": "Solar",
+      "emissions": 0.17502814749692266,
+      "facility_id": 130,
+      "percentage": 20.08761167799468
+    },
+    {
+      "to_tech": "Wind",
+      "emissions": 0.23322299235951033,
+      "facility_id": 300,
+      "percentage": 26.76651139771752
+    }
+  ],
+  "cost_distribution": [
+    {
+      "cost_band": "Negative cost",
+      "emissions_gt": 0.09675982378081285,
+      "percentage": 11.104921088045778,
+      "facility_count": 139
+    },
+    {
+      "cost_band": "0-20 $/tonne",
+      "emissions_gt": 0.0016061549182722276,
+      "percentage": 0.18433501556383122,
+      "facility_count": 5
+    },
+    {
+      "cost_band": "20-50 $/tonne",
+      "emissions_gt": 0.0068293236342868964,
+      "percentage": 0.7837870831108379,
+      "facility_count": 13
+    },
+    {
+      "cost_band": "50-100 $/tonne",
+      "emissions_gt": 0.3802834653802953,
+      "percentage": 43.6443320081178,
+      "facility_count": 187
+    },
+    {
+      "cost_band": "> 100 $/tonne",
+      "emissions_gt": 0.38584506262829554,
+      "percentage": 44.28262480516175,
+      "facility_count": 614
+    }
+  ]
+}
